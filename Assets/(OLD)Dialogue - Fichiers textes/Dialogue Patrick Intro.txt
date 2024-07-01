@@ -1,0 +1,37 @@
+Bienvenue au Lien! 
+<br>Je suis Patrick, votre fidèle guide à travers ce lieu chargé d'histoire et hors du commun.
+
+Après des décennies d'isolement, je suis enfin libre grâce au collectif du Lien.
+
+[EVENT=Clap]Ce lieu regorge de trésors et de mystères, et c'est avec joie que 
+je vous accompagnerai pour vous en dévoiler tous les secrets.
+
+[EVENT=Point]Maintenant, laissez-moi vous parler du Lien. 
+
+[EVENT=Reset]En 2019, le collectif du Lien réinvestit cette friche industrielle de quatre hectares. 
+
+C'est désormais un tier lieu qui offre des espaces partagés, de liberté, de culture et d'expérimenation.
+Le Lien est bien plus qu'une simple association. 
+
+[EVENT=Talk]Les objectifs et les valeurs du Lien sont au cœur de notre mission. 
+Son but est de réunir des activités de des personnes qui partagent 
+les mêmes engagement d'écoresponsabilité et d'impact social 
+
+[EVENT=Clap]Maintenant, passons au principe du jeu. 
+
+[EVENT=ActiveMap]En appuyant sur le bouton 'carte', vous ouvrez la carte du tiers-lieu. 
+Cette carte vous permet de visualiser les différents bâtiments présents dans le tiers-lieu 
+et d'obtenir des informations supplémentaires sur chacun d'eux.
+
+[EVENT=Point]Mais ce n'est pas tout ! 
+
+[EVENT=Reset]Si vous vous sentez perdus ou si vous ne savez pas par où commencer, 
+[EVENT=ActiveScan]vous pouvez toujours compter sur le bouton 'scan'. 
+
+En appuyant sur ce bouton, l'application vous indiquera le QR code le plus proche. 
+Il vous suffit ensuite de scanner ce QR code pour débuter la visite d'un bâtiment et le déverrouiller sur la carte.
+
+En explorant les différents bâtiments et en scannant les QR codes, 
+vous pourrez découvrir tous les secrets et les trésors cachés de ce tiers-lieu fascinant. 
+
+[EVENT=Point]Alors, préparez-vous à vivre une expérience immersive et passionnante !

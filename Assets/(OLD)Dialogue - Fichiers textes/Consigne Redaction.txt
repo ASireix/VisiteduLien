@@ -1,0 +1,21 @@
+Retour à la ligne : insérer "<br>" avant le texte. Exemple:
+Retour <br>à <br>la <br>ligne. -> Donne le résultat ci-dessous :
+Retour
+à
+la 
+ligne. 
+
+
+-------------------
+
+Nouvelle bulle de dialogue : Laisser une ou plusieurs ligne vide 
+entre chaque bulles (les retours classique ne sont pas pris en compte) : 
+
+Blabla
+
+Blabla 
+
+--------------------
+
+Evènements : [EVENT=Nom de l'évènement] -> n'importe quel nom fonctionne.
+Uniquement en début de bulle.

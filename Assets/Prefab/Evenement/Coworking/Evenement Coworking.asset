@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d54f9f290ee8a41229cf214613490e70, type: 3}
+  m_Name: Evenement Coworking
+  m_EditorClassIdentifier: 
+  useFlatEvent: 0
+  arEvent: {fileID: 5135367737559982437, guid: 61f41a1c41759d3739226dd33d60ec73, type: 3}
+  flatEvent: {fileID: 1442847046130776964, guid: b95d0f7f7ae990b429369b534611118b,
+    type: 3}
+  backgroundImageForFlatEvent: {fileID: 0}

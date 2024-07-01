@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ed8b140537683a09aa0770040cbf4a, type: 3}
+  m_Name: Aurore - Intro Guidee
+  m_EditorClassIdentifier: 
+  pastebinURL: https://pastebin.com/raw/5qZXuh1q
+  textFile: {fileID: 4900000, guid: 69a672180e1a4944fa7849068297e230, type: 3}
+  _persistantTextFile: "Ah, ici, c'est l'\xE9picerie \"Chez Aurore\", tenue par...
+    eh bien, Aurore. Ouais, la fondatrice elle-m\xEAme. Une jeune Normande, figurez-vous,
+    qui a troqu\xE9 sa carri\xE8re dans la Fonction Publique pour venir s'enterrer
+    ici, au pied des Pyr\xE9n\xE9es. \r\n\r\nElle a fait des \xE9tudes de secr\xE9tariat,
+    mais \xE7a ne l'a pas emp\xEAch\xE9e de se lasser de sa vie, oh non.\r\n\r\nApr\xE8s
+    quelques ann\xE9es, elle a senti l'appel des montagnes. Apr\xE8s des vacances
+    r\xE9ussies, elle a d\xE9cid\xE9 de changer de vie et de r\xE9gion. Et devinez
+    quoi ? Elle tombe sur le projet de tiers-lieu \"Le Lien\". \r\n\r\nElle discute
+    avec la proprio, expose son r\xEAve, et paf ! Le courant passe, et c'est d\xE9cid\xE9.\r\n\r\nAurore
+    devient la premi\xE8re commer\xE7ante \xE0 se lancer dans ce nouveau tiers-lieu
+    du secteur tarbais ! Elle n'a pas perdu de temps. En novembre 2021, elle ouvre
+    son \xE9picerie vrac et locale \"Chez Aurore\" \xE0 Ibos, apr\xE8s avoir d\xE9barqu\xE9
+    dans la r\xE9gion en 2018. \r\n\r\nLes murs \xE9taient \xE0 peine finis, mais
+    elle, elle \xE9tait pr\xEAte. Et les clients aussi : ils ont afflu\xE9 d\xE8s
+    l'ouverture, par curiosit\xE9 ou par r\xE9el int\xE9r\xEAt.\r\n\r\nM\xEAme si
+    les d\xE9buts ont \xE9t\xE9 rudes avec le COVID et l'hiver, aujourd'hui, son
+    petit commerce sur la route de Pau est devenu grand. On y trouve une Aurore souriante,
+    \xE9panouie, qui vous accueille avec des conseils passionn\xE9s. \r\n\r\nVous
+    naviguez entre les l\xE9gumes bio, la collecte solidaire, les bouteilles d'huile
+    et de vin local, et les ateliers cr\xE9atifs qu'elle organise. Son caf\xE9 est
+    un havre de paix o\xF9 on se d\xE9tend pendant que les enfants jouent avec une
+    dinette vintage et des coloriages.\r\n\r\n\"Chez Aurore\", c'est plus qu'une
+    \xE9picerie. C'est un lieu de convivialit\xE9 o\xF9 on se sent bien, et o\xF9
+    on repart avec un panier plein alors qu'on \xE9tait juste venu jeter un coup
+    d'\u0153il. \r\n\r\nLa qualit\xE9 des produits est ind\xE9niable, et les conseils
+    d'Aurore finissent de convaincre les visiteurs.\r\n\r\nBon, maintenant que tu
+    sais tout sur l'\xE9picerie, je d\xE9bloque le b\xE2timent sur ta carte. Allez,
+    file !"

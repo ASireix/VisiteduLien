@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ed8b140537683a09aa0770040cbf4a, type: 3}
+  m_Name: Envie - Intro G
+  m_EditorClassIdentifier: 
+  pastebinURL: https://pastebin.com/raw/BFYr8HHQ
+  textFile: {fileID: 4900000, guid: 4220e42f7089ba74d8334d4f18a208fd, type: 3}
+  _persistantTextFile: "Ah, l'association Envie... une histoire pas banale. Fond\xE9e
+    en 2011, elle a pour mission d'accompagner socioprofessionnellement les jeunes
+    et les adultes. Ouais, elle utilise le cadre de l'entreprise pour l'insertion
+    sociale et professionnelle. Pas mal, non ? \r\n\r\nElle donne des contrats de
+    travail et des parcours de formation \xE0 ceux qui en ont besoin, histoire d'am\xE9liorer
+    leurs chances de trouver un boulot.\r\n\r\nLeurs activit\xE9s ? Eh bien, ils
+    remettent \xE0 neuf et r\xE9parent du gros \xE9lectrom\xE9nager, comme des frigos,
+    des cuisini\xE8res, des machines \xE0 laver, et du petit \xE9lectrom\xE9nager,
+    genre fer \xE0 repasser, grille-pain. \r\n\r\nIls s'occupent aussi des produits
+    bruns : TV, micro-informatique, t\xE9l\xE9phonie... Tout ce bazar. Et ces produits
+    r\xE9nov\xE9s sont garantis un an dans tout le r\xE9seau Envie. Plut\xF4t cool,
+    non ?\r\n\r\nEnvie, c'est un r\xE9seau d'associations qui c\xE9l\xE8bre cette
+    ann\xE9e ses 31 ans. Ils ont plus de 40 magasins partout sur le territoire. \xC7a
+    en fait du chemin parcouru depuis le d\xE9but.\r\n\r\nBon, maintenant que tu
+    sais tout sur Envie, je d\xE9bloque le b\xE2timent sur ta carte. Allez, file
+    !"

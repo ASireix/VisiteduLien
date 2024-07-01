@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b90f46539d38bf3a3bf8e093d204bc6b, type: 3}
+  m_Name: ED Bat D
+  m_EditorClassIdentifier: 
+  Id: 7b62ff5901d4d8a01a287c572ad54bfb
+  isCompleted: 1
+  isIntroCompleted: 0
+  code: 3456
+  objectToShow: {fileID: 2131760110050211125, guid: fc30a49a9363e5046ad281774a7e9102,
+    type: 3}

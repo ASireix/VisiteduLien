@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ed8b140537683a09aa0770040cbf4a, type: 3}
+  m_Name: Etang - Intro J
+  m_EditorClassIdentifier: 
+  pastebinURL: https://pastebin.com/raw/qFS0NmQq
+  textFile: {fileID: 4900000, guid: 15a98128c095d2543be28f45e155eebd, type: 3}
+  _persistantTextFile: "Sommes nous bien devant l'\xE9tang ?\r\n \r\nJe suis d\xE9sol\xE9
+    de te l'apprendre mais on dirait que ma m\xE9moire me joue des tours.\r\n \r\nJ'ai
+    oubli\xE9 ce que je devais dire. Mais pas de panique, termines ce mini jeu et
+    d\xE9bloque l'\xE9v\xE8nement sur la carte."

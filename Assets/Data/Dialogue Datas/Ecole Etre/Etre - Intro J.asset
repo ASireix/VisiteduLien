@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ed8b140537683a09aa0770040cbf4a, type: 3}
+  m_Name: Etre - Intro J
+  m_EditorClassIdentifier: 
+  pastebinURL: https://pastebin.com/raw/8huKDjiM
+  textFile: {fileID: 4900000, guid: fd71bf6403c73c047b57d92610c77e9b, type: 3}
+  _persistantTextFile: "\xC9co-Habilis a \xE9t\xE9 cr\xE9\xE9e en 2017 et s\u2019appelait
+    \xE0 l\u2019origine Terre de Bois. \r\n\r\nElle est bas\xE9e  entre Escots et
+    Nestier dans les Hautes-Pyr\xE9n\xE9es et a pour but de promouvoir les savoir-faire
+    traditionnels, les principes d\u2019\xE9cologie pratique et de rendre accessible
+    \xE0 tous un habitat sain et confortable.\r\n\r\nNous avons \xE0 coeur de proposer
+    une palette de formations de qualit\xE9, vari\xE9es, pour diff\xE9rents publics.\r\n\r\nMa\xE7onnerie
+    d\u2019adobes, couverture en chaume, rocket stove, poterie primitive, zinguerie\u2026
+    Vous en trouverez pour tous les go\xFBts !\r\n\r\nMaintenant que tu sais tout
+    \xE7a, si tu es capable de r\xE9ussir ce jeu de m\xE9moire.\r\n\r\nAppuie sur
+    les cartes pour les retourner et faire des paires. Tu as un temps limit\xE9 au
+    d\xE9but pour voir toutes \r\nles cartes retourn\xE9es. Tu es pr\xEAts ?\r\n\r\n3\r\n\r\n2\r\n\r\n1\r\n\r\nGO
+    !\r\n\r\n[EVENT=Memory]"

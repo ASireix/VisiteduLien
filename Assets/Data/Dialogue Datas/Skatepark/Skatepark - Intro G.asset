@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ed8b140537683a09aa0770040cbf4a, type: 3}
+  m_Name: Skatepark - Intro G
+  m_EditorClassIdentifier: 
+  pastebinURL: https://pastebin.com/raw/rqtZSLE4
+  textFile: {fileID: 4900000, guid: 2bd77d6231dff7c41a033cb708c467c3, type: 3}
+  _persistantTextFile: "Ah, l\u2019association Bigoride ! C\u2019est une histoire
+    qui d\xE9bute gr\xE2ce aux skateurs locaux en 2018. Un club de skateboard qui
+    veut propager la pratique dans notre belle r\xE9gion. \r\n\r\nIls jouent aussi
+    un r\xF4le de liaison entre les municipalit\xE9s locales et les adeptes du skate.\r\n\r\nSes
+    missions ? Eh bien, ils organisent des cours de skateboard tous les lundis, mercredis
+    et samedis. \xC7a se passe soit au skatepark de Tarbes, soit au skatepark du
+    Lien. \r\n\r\nEn plus, ils font des stages pendant les vacances, et c\u2019est
+    ouvert aux m\xF4mes \xE0 partir de cinq ans. Ils proposent m\xEAme des cours
+    particuliers si tu leur demandes.\r\n\r\nL\u2019association intervient aussi
+    dans des endroits comme des \xE9coles, des MJC, des ITEP et des centres de loisirs.
+    Ils initient les jeunes \xE0 ce sport cool.\r\n\r\nMais Bigoride, c\u2019est
+    pas que \xE7a ! Ils organisent aussi des \xE9v\xE9nements comme des comp\xE9titions,
+    des challenges, des concerts et des concours de vid\xE9os. Ils ont toujours quelque
+    chose \xE0 te proposer pour pimenter ta vie de skateur.\r\n\r\nMaintenant que
+    tu connais tout sur Bigoride, je d\xE9bloque leur b\xE2timent sur ta carte. Que
+    ta glisse soit fluide et ta descente triomphale."
