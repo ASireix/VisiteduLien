@@ -39,12 +39,11 @@ public class SceneControllerMono : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        yield return StartCoroutine(dialogueUpdateManager.UpdateFiles());
-        /*
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(mainGameSceneName));
-        SceneManager.UnloadSceneAsync(currentScene);
-        */
+        yield return StartCoroutine(dialogueUpdateManager.UpdateFiles((progress) =>
+        {
+            progressFill.fillAmount =progress;
+        }));
+
     }
 
     public IEnumerator ActivateScene()

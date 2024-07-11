@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ED Envie
   m_EditorClassIdentifier: 
   Id: aba3e85e550785022a923a09bf021caf
-  isCompleted: 0
+  isCompleted: 1
   isIntroCompleted: 0
   code: 4567
   objectToShow: {fileID: 2131760110050211125, guid: 98a9acee8905bd0448645cc4ecf2f408,

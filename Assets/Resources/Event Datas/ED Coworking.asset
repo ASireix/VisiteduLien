@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ED Coworking
   m_EditorClassIdentifier: 
   Id: 7f0447bc4367185f990bf295bc179bc0
-  isCompleted: 0
+  isCompleted: 1
   isIntroCompleted: 0
   code: 1234
-  objectToShow: {fileID: 2131760110050211125, guid: 1d5f99dd619da7a449469e35cfa944b2,
+  objectToShow: {fileID: 2131760110050211125, guid: c7d5048514ca4c642a055d8ce0876752,
     type: 3}

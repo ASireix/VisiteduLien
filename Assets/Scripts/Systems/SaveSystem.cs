@@ -37,13 +37,13 @@ public class SaveSystem : ScriptableObject
         }
     }
 
-    public void LoadSave()
+    public bool LoadSave()
     {
         LoadAllEventDatas();
 
         string base64string = PlayerPrefs.GetString("savesys", "");
-
-        if (base64string != "")
+        bool check = base64string != "";
+        if (check)
         {
             eventsSaves = Serializer.Load<Dictionary<string, bool>>(base64string);
             SaveData();
@@ -52,6 +52,7 @@ public class SaveSystem : ScriptableObject
         {
             Save();
         }
+        return check;
     }
 
     public void Save()

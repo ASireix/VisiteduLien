@@ -8,6 +8,8 @@ public class SaveManager : MonoBehaviour
     public SaveSystem saveSystem;
 
     public static SaveManager instance;
+    public bool firstSave { get; private set; }
+
 
     void Awake()
     {
@@ -20,7 +22,7 @@ public class SaveManager : MonoBehaviour
             Destroy(this);
         }
 
-        saveSystem.LoadSave();
+        firstSave = saveSystem.LoadSave();
     }
 
     void OnEventComplete(){

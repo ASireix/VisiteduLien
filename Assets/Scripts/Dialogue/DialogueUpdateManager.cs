@@ -13,7 +13,7 @@ public class DialogueUpdateManager : MonoBehaviour
         //StartCoroutine(UpdateFiles());
     }
 
-    public IEnumerator UpdateFiles()
+    public IEnumerator UpdateFiles(System.Action<float> onProgress)
     {
         bool finished = false;
         string txt = "";
@@ -58,6 +58,9 @@ public class DialogueUpdateManager : MonoBehaviour
                 }
                 errors++;
             }
+            float p = Mathf.Clamp01((float)(i + 1) / unitAssetPack.TextFiles.Length);
+            Debug.Log("THiSIS PROHRESS : " + p);
+            onProgress?.Invoke(p);
             yield return null;
         }
         Debug.Log($"Successfully updated {completedUpdates} text files with {errors} errors");

@@ -7,7 +7,7 @@ public class MenuMiniGamesAdd : MonoBehaviour
 {
     const string enigmeAssetPath = "Assets/Prefab/Mini games/Enigme.prefab";
     const string justePrixAssetPath = "Assets/Prefab/Mini games/Juste prix.prefab";
-    const string questionnaireAssetPath = "";
+    const string questionnaireAssetPath = "Assets/Prefab/Mini games/Questionnaire.prefab";
 
     static void CreateMiniGame(string path, MenuCommand command)
     {
@@ -22,6 +22,7 @@ public class MenuMiniGamesAdd : MonoBehaviour
     [MenuItem("GameObject/Minigame/Enigme")]
     static void CreateMiniGameEnigme(MenuCommand command)
     {
+        CreateMiniGame(enigmeAssetPath, command);
         Debug.Log("Enigme");
     }
 
@@ -35,6 +36,7 @@ public class MenuMiniGamesAdd : MonoBehaviour
     [MenuItem("GameObject/Minigame/Questionnaire")]
     static void CreateMiniGameQuestionnaire(MenuCommand command)
     {
+        CreateMiniGame(questionnaireAssetPath, command);
         Debug.Log("Questionnaire");
     }
 }

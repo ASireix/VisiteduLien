@@ -37,7 +37,7 @@ public class UnitAssetPackEditor : Editor
             myAssetPack.SetupArrayURLs();
         }
 
-        if (GUILayout.Button("Update textfiles URLs"))
+        if (GUILayout.Button("Update textfiles URLs") && myAssetPack.URLs.Length == myAssetPack.TextFiles.Length)
         {
             myAssetPack.UpdateTextFilesURLs();
         }

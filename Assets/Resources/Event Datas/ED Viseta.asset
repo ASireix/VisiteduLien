@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ED Viseta
   m_EditorClassIdentifier: 
   Id: f98450d0a854914449231916a646ea12
-  isCompleted: 0
+  isCompleted: 1
   isIntroCompleted: 0
   code: 0006
   objectToShow: {fileID: 4966226444344857755, guid: e2202e5677454104eb40b34e51075128,

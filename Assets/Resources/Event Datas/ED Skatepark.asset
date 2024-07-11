@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ED Skatepark
   m_EditorClassIdentifier: 
   Id: dd7584e50702ff144bdc8969ebbfd33a
-  isCompleted: 0
+  isCompleted: 1
   isIntroCompleted: 0
   code: 0005
   objectToShow: {fileID: 2131760110050211125, guid: 35c4dd923daf47f478c25c3db6fff2ea,

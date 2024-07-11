@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ED Padel
   m_EditorClassIdentifier: 
   Id: 45fd011bd5b32a62b886ef7366c4e97a
-  isCompleted: 0
+  isCompleted: 1
   isIntroCompleted: 0
   code: 5678
   objectToShow: {fileID: 2131760110050211125, guid: db217f3eb2d769245a54914a85d662a2,

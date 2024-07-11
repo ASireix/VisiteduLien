@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ED Cour et Jardin
   m_EditorClassIdentifier: 
   Id: fadf4169e4e86cd44b17008f2e046cb3
-  isCompleted: 0
+  isCompleted: 1
   isIntroCompleted: 0
   code: 0001
   objectToShow: {fileID: 2131760110050211125, guid: 626ae65c48f8d554ca4581bc1a008914,

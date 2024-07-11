@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ED Etang
   m_EditorClassIdentifier: 
   Id: 2c1106476bcf00646ab41328e689a971
-  isCompleted: 0
+  isCompleted: 1
   isIntroCompleted: 0
   code: 0002
   objectToShow: {fileID: 4966226444344857755, guid: e2202e5677454104eb40b34e51075128,

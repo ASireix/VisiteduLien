@@ -9,4 +9,6 @@ public class EvenementScriptableObject : ScriptableObject
     public Evenement arEvent;
     public Evenement flatEvent;
     public Sprite backgroundImageForFlatEvent;
+    public Vector2 right_top;
+    public Vector2 left_bottom;
 }

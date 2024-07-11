@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -37,6 +38,8 @@ public class ImageTracking : MonoBehaviour
     [SerializeField] float eventCooldown = 5f;
 
     bool isInEvent;
+    bool _tracking = true;
+    string lastPrefabName;
 
     private void Awake()
     {
@@ -62,7 +65,13 @@ public class ImageTracking : MonoBehaviour
                 anchor.SetActive(false);
             }
             newPrefab.name = item.name;
+            lastPrefabName = item.name;
         }
+    }
+
+    public void ToggleTracking(bool on)
+    {
+        _tracking = on;
     }
 
     private void Start()
@@ -97,6 +106,7 @@ public class ImageTracking : MonoBehaviour
 
     void ImageChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
+        if (!_tracking) return;
         //Debug.Log("The image changed");
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
@@ -121,13 +131,29 @@ public class ImageTracking : MonoBehaviour
         }
     }
 
+    public async void LaunchLastEvent()
+    {
+        await Task.Delay(2000);
+        Debug.Log("lastPrefabname = " + lastPrefabName);
+        GameObject prefab = spawnedPrefabs[lastPrefabName].Item1;
+        prefab.SetActive(true);
+
+        if (spawnedPrefabs[lastPrefabName].Item2.useFlatEvent)
+        {
+            backgroundForFlat.gameObject.SetActive(true);
+            backgroundForFlat.sprite = spawnedPrefabs[lastPrefabName].Item2.backgroundImageForFlatEvent;
+            aRSession.GetComponent<ARSession>().enabled = false;
+        }
+
+        isInEvent = true;
+    }
     void UpdateImage(ARTrackedImage trackedImage)
     {
+        if (!_tracking) return;
         string name = trackedImage.referenceImage.name;
         trackedImage.transform.GetPositionAndRotation(out Vector3 position, out Quaternion rotation);
         GameObject prefab = spawnedPrefabs[name].Item1;
-        
-        Debug.Log("Tracked image named " + name + " is at cooldown : " + imagesProgress[trackedImage].cooldown+" and is refreshed ? : "+ imagesProgress[trackedImage].refreshed);
+        //Debug.Log("Tracked image named " + name + " is at cooldown : " + imagesProgress[trackedImage].cooldown+" and is refreshed ? : "+ imagesProgress[trackedImage].refreshed);
         
         bool state = UpdatePrefabPosition(prefab, trackedImage, name, position, rotation);
         //Keep the ar evenement in place and stop the scan progression
@@ -151,22 +177,17 @@ public class ImageTracking : MonoBehaviour
         if (state)
         {
             imagesProgress[trackedImage].progress = 0f;
-
             if (!spawnedPrefabs[name].Item2.useFlatEvent)
             {
                 prefab.transform.SetPositionAndRotation(position, rotation);
             }
-
             DisableInactiveEvents(name);
         }
-
         return state;
     }
 
     void UpdateScanProgress(ARTrackedImage trackedImage)
     {
-        
-
         if (trackedImage.trackingState == TrackingState.Tracking && imagesProgress[trackedImage].refreshed)
         {
             //Debug.Log("We are tracking"+name);
@@ -188,7 +209,6 @@ public class ImageTracking : MonoBehaviour
             Debug.Log("Resetting refresh with cooldown being : " + imagesProgress[trackedImage].cooldown);
             imagesProgress[trackedImage].cooldown = 0f;
             imagesProgress[trackedImage].refreshed = true;
-
         }
     }
 
@@ -215,9 +235,15 @@ public class ImageTracking : MonoBehaviour
         {
             backgroundForFlat.gameObject.SetActive(true);
             backgroundForFlat.sprite = spawnedPrefabs[name].Item2.backgroundImageForFlatEvent;
+            RectTransform rectTransform = backgroundForFlat.GetComponent<RectTransform>();
+            Vector2 max = spawnedPrefabs[name].Item2.right_top;
+            Vector2 min = spawnedPrefabs[name].Item2.left_bottom;
+            rectTransform.SetTop(max.y);
+            rectTransform.SetLeft(min.x);
+            rectTransform.SetRight(max.x);
+            rectTransform.SetBottom(min.y);
             aRSession.GetComponent<ARSession>().enabled = false;
         }
-
         imagesProgress[trackedImage].cooldown = eventCooldown;
     }
 }

@@ -529,7 +529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &370257438
 Transform:
   m_ObjectHideFlags: 0
@@ -539,7 +539,7 @@ Transform:
   m_GameObject: {fileID: 370257437}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8944856, y: 1.8514649, z: 0.16063583}
+  m_LocalPosition: {x: -1.99, y: 4.24, z: 4.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -742,6 +742,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair_Coworking
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c07ce2d40cfd62898b39452ef54ac886,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -885,6 +890,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bureau
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ede4d21a9cd16049bb6ac85e7e6eff4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -922,17 +932,21 @@ MonoBehaviour:
   onMiniGameFinished:
     m_PersistentCalls:
       m_Calls: []
-  spacingX: 1.5
-  spacingY: 3
+  spacingX: 2.1
+  spacingY: 2.5
   column: 4
   launchOnStart: 1
-  revealLength: 1
+  revealLength: 2
   memoryCards:
-  - {fileID: 11400000, guid: c19882ee36cf8d5beb52eaaabb651062, type: 2}
-  - {fileID: 11400000, guid: f3fac1a6b04f1a0e5b5b5c4a9f71fcd6, type: 2}
-  - {fileID: 11400000, guid: 47e9235dce30270fc824c1f3fb4f048a, type: 2}
-  - {fileID: 11400000, guid: 5538cb715827b019084c12e06d0050bb, type: 2}
-  backface: {fileID: 2800000, guid: e7ba97cd702e800739acc4ab7985f1b6, type: 3}
+  - {fileID: 11400000, guid: 42a7f6016c840064790712709c23ea34, type: 2}
+  - {fileID: 11400000, guid: c5cab6ddeab7ddf4eba7ac5658e03b75, type: 2}
+  - {fileID: 11400000, guid: d27c6336ef307b2499ac51a2982ffe4c, type: 2}
+  - {fileID: 11400000, guid: e07135b23191f3d4b81011803ef7a322, type: 2}
+  - {fileID: 11400000, guid: 338b8ab6343939644b05bb3381fd13d6, type: 2}
+  - {fileID: 11400000, guid: e3da92b5495575c4299aedb8a55aa431, type: 2}
+  - {fileID: 11400000, guid: 358d21722c3599a4fa50b36c93d7e8e0, type: 2}
+  - {fileID: 11400000, guid: 404af770f8cf0dc43965a3a5f9c41eb6, type: 2}
+  backface: {fileID: 2800000, guid: 4367452a28cc723458332026cbe16be0, type: 3}
   cardPrefab: {fileID: 252530155619432574, guid: 5a223d796ce1fa135a4bb243e74e24a6,
     type: 3}
 --- !u!4 &1353127969
@@ -1200,6 +1214,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Case
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3f0356f50cbf4648bef92fed3729432,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1344,6 +1363,11 @@ PrefabInstance:
     - target: {fileID: 4237395661925720635, guid: deb2aeaabc79efe4794cab2883d96678,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562921864446578014, guid: deb2aeaabc79efe4794cab2883d96678,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8039744495484494049, guid: deb2aeaabc79efe4794cab2883d96678,

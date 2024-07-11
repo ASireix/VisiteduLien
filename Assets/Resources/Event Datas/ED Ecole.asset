@@ -16,5 +16,5 @@ MonoBehaviour:
   isCompleted: 1
   isIntroCompleted: 0
   code: 5555
-  objectToShow: {fileID: 4966226444344857755, guid: e2202e5677454104eb40b34e51075128,
+  objectToShow: {fileID: 2131760110050211125, guid: 1d5f99dd619da7a449469e35cfa944b2,
     type: 3}

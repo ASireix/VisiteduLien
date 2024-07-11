@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ED Jardin
   m_EditorClassIdentifier: 
   Id: d43a964e31197cf4aa17438582c335ca
-  isCompleted: 0
+  isCompleted: 1
   isIntroCompleted: 0
   code: 0003
   objectToShow: {fileID: 2131760110050211125, guid: 81f6b47a14a14c841b6028cb4c278d88,

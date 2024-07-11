@@ -15,14 +15,18 @@ MonoBehaviour:
   TextFiles:
   - {fileID: 11400000, guid: c4264df04c65117439ad0e9889a1d8dd, type: 2}
   - {fileID: 11400000, guid: 2807a4e3a817aff4588d951a2a91b184, type: 2}
+  - {fileID: 11400000, guid: a8d69ef832030f84b9eb8eea0dad8f4b, type: 2}
   - {fileID: 11400000, guid: 35764bb10f3857c4da87beced468c619, type: 2}
   - {fileID: 11400000, guid: 0ad543b3c2770ea40837b74f0e2ced7f, type: 2}
+  - {fileID: 11400000, guid: aa00ec2c09f52864db6f05da0f07b363, type: 2}
   - {fileID: 11400000, guid: 6419c07654a7e876fad00f179d0a8420, type: 2}
   - {fileID: 11400000, guid: f8156d4113e300edfb1ef1dcdf524c10, type: 2}
   - {fileID: 11400000, guid: 5790d0d311fbe8dd985d87bdbcc5443d, type: 2}
   - {fileID: 11400000, guid: 355233c867d5cf2d58de9114e686693b, type: 2}
   - {fileID: 11400000, guid: 2a63077871af81946848e9f9c501b73e, type: 2}
   - {fileID: 11400000, guid: 2b9148f7708228c48829bfce44bb07e2, type: 2}
+  - {fileID: 11400000, guid: 75c291b99ebd7584299c0b06fda320bd, type: 2}
+  - {fileID: 11400000, guid: b9279e7e20365d84a96d07cffff5f612, type: 2}
   - {fileID: 11400000, guid: 7b29ddb79e8457849abedee60e9cadb8, type: 2}
   - {fileID: 11400000, guid: b9062493936cdf143a02389477a5174d, type: 2}
   - {fileID: 11400000, guid: 1ba223b7bb439794ba63429322b2bf20, type: 2}
@@ -33,23 +37,32 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fb167ec3ea6e6db4da2aa80a719b870f, type: 2}
   - {fileID: 11400000, guid: dd25bb33f7dcc034790dc974021923b6, type: 2}
   - {fileID: 11400000, guid: d32302ee98d8ac694814560f915cd4e6, type: 2}
+  - {fileID: 11400000, guid: a1f6cdd9831eaf94cb83f76df9ae7194, type: 2}
+  - {fileID: 11400000, guid: bd513321756f5a741a44b6556f32131d, type: 2}
+  - {fileID: 11400000, guid: 92426d4c7086cce4597b70962c21c07f, type: 2}
+  - {fileID: 11400000, guid: f5ffcd82058a72e459f3c693e6e62b95, type: 2}
+  - {fileID: 11400000, guid: 73869ecabab679448bdbfc167609f63a, type: 2}
   - {fileID: 11400000, guid: a92b4cbec5a720f1c82aefcd44548353, type: 2}
   - {fileID: 11400000, guid: 7c569ed21649a4041b8aa32969ea12d1, type: 2}
   - {fileID: 11400000, guid: 181d96c36037890f6b4bdd9e07c78592, type: 2}
   - {fileID: 11400000, guid: 6ef284ad62492a342a8d3f317bc92863, type: 2}
   - {fileID: 11400000, guid: bb05d0f9a6bcc5e46851e6487bb4f291, type: 2}
+  - {fileID: 11400000, guid: d5f391bf995db3243a33ce83d08e32a9, type: 2}
   - {fileID: 11400000, guid: 004020e0e58fc4047a1225407921f1b0, type: 2}
   - {fileID: 11400000, guid: 1f486a3bbe106dc4cbba76554750586a, type: 2}
+  - {fileID: 11400000, guid: e007c71834f42f14293145185adc8c71, type: 2}
   - {fileID: 11400000, guid: ec13f36605d33314099bedc6eb84021f, type: 2}
   - {fileID: 11400000, guid: 5801847a827e39f4bb26863944459702, type: 2}
   - {fileID: 11400000, guid: acdd1d943016dc944a56f31a1e9d4f10, type: 2}
   - {fileID: 11400000, guid: e9a24e558ae0c9a41808d68b47c13f65, type: 2}
+  - {fileID: 11400000, guid: 6ee5a6e8618c08645a2886475b8b2ebe, type: 2}
   - {fileID: 11400000, guid: 97b0ea76545b3a74d84f16d195987b01, type: 2}
   - {fileID: 11400000, guid: 6a12961f91f886749a79609b3c679d22, type: 2}
   EventDatas:
   - {fileID: 11400000, guid: 4b5dc977e1edd0c9e96ce5f8349ff0e7, type: 2}
   - {fileID: 11400000, guid: d94488846e2ec3b42bcf86bca5c61d5b, type: 2}
   - {fileID: 11400000, guid: 7b62ff5901d4d8a01a287c572ad54bfb, type: 2}
+  - {fileID: 11400000, guid: c7c1419c1cee5124db41a257635e3ee6, type: 2}
   - {fileID: 11400000, guid: fadf4169e4e86cd44b17008f2e046cb3, type: 2}
   - {fileID: 11400000, guid: 7f0447bc4367185f990bf295bc179bc0, type: 2}
   - {fileID: 11400000, guid: e1642eade404db0ac9ba1b42713e237d, type: 2}
@@ -65,12 +78,15 @@ MonoBehaviour:
   - https://pastebin.com/raw/ZQD3dw4y
   - https://pastebin.com/raw/iMP8gTBa
   - https://pastebin.com/raw/iMP8gTBa
+  - https://pastebin.com/raw/Pkqfpq3K
   - https://pastebin.com/raw/n44JSCNg
   - https://pastebin.com/raw/D6UeRHb6
   - https://pastebin.com/raw/eFe71H1q
   - https://pastebin.com/raw/Up54cEVB
   - https://pastebin.com/raw/xHipNHhN
   - https://pastebin.com/raw/qMGLc23k
+  - https://pastebin.com/raw/e8GZ5ESh
+  - https://pastebin.com/raw/JgrGqEBy
   - https://pastebin.com/raw/5yrr1Jzj
   - https://pastebin.com/raw/vtCx586z
   - https://pastebin.com/raw/fj4uuN5T
@@ -81,17 +97,25 @@ MonoBehaviour:
   - https://pastebin.com/raw/4jwe3Zei
   - https://pastebin.com/raw/qFS0NmQq
   - 
+  - https://pastebin.com/raw/WAgBdXq4
+  - https://pastebin.com/raw/bxsfZW5A
+  - https://pastebin.com/raw/rbTPydpE
+  - https://pastebin.com/raw/beV0DvAj
+  - https://pastebin.com/raw/hSk89tk3
   - https://pastebin.com/raw/yQBi34iF
   - https://pastebin.com/raw/ch5ASBgm
   - https://pastebin.com/raw/s8WAgdEt
   - https://pastebin.com/raw/knxM4bYR
   - https://pastebin.com/raw/p96XEXiC
+  - https://pastebin.com/raw/1Z9bi0QJ
   - https://pastebin.com/raw/aFWu6BWn
   - https://pastebin.com/raw/dPNRbMfh
+  - https://pastebin.com/raw/V6zDwdGC
   - https://pastebin.com/raw/LcEr0iud
   - https://pastebin.com/raw/s0Ncvfin
   - https://pastebin.com/raw/rqtZSLE4
   - https://pastebin.com/raw/PwE9HJDx
+  - https://pastebin.com/raw/aJAgPt9T
   - https://pastebin.com/raw/BPYArWke
   - https://pastebin.com/raw/VNqHuRv6
   textFilesPath: Assets/Data/Dialogue Datas

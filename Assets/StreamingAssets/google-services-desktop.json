@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "486870443259",
+    "firebase_url": "https://visite-lien-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "visite-lien",
+    "storage_bucket": "visite-lien.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486870443259:android:34bf29f4c298e26e30bc5e",
+        "android_client_info": {
+          "package_name": "com.LeLien.VisiteDuLien"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-bxPpqxXM3YfioqImZwttgP83XNuxs5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

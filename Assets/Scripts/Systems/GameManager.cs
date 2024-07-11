@@ -9,7 +9,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] int amountEventsRequiredToWin;
     [SerializeField] TextMeshProUGUI alertText;
-    int currentAmount = 0;
+    [SerializeField] int currentAmount = 0;
+
+    [Space]
+    [SerializeField] ImageTracking imageTracking;
 
     private void Awake()
     {
@@ -38,7 +41,9 @@ public class GameManager : MonoBehaviour
 
     void WinGame()
     {
-
+        Debug.Log("you win");
+        imageTracking.ToggleTracking(false);
+        imageTracking.LaunchLastEvent();
     }
 
     void ShowAlert()

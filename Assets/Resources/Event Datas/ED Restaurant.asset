@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ED Restaurant
   m_EditorClassIdentifier: 
   Id: 95e92fe203f50d6449d3a3e544655430
-  isCompleted: 0
+  isCompleted: 1
   isIntroCompleted: 0
   code: 0004
   objectToShow: {fileID: 4966226444344857755, guid: e2202e5677454104eb40b34e51075128,
