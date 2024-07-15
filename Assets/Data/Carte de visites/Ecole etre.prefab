@@ -1224,6 +1224,16 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 7479415429668552005, guid: 4714c57e0194516438ea26ec07e033a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: https://www.facebook.com/centre.ecohabilis/
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819197024676585982, guid: 4714c57e0194516438ea26ec07e033a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: https://www.instagram.com/explore/locations/101683674945423/centre-eco-habilis/
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

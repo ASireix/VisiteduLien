@@ -1546,6 +1546,16 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 7479415429668552005, guid: 4714c57e0194516438ea26ec07e033a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: https://www.facebook.com/people/Legend-PADEL-Tarbes/100083598661221/
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819197024676585982, guid: 4714c57e0194516438ea26ec07e033a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: https://www.instagram.com/legend_padel/
+      objectReference: {fileID: 0}
     - target: {fileID: 8153061720109793570, guid: 4714c57e0194516438ea26ec07e033a3,
         type: 3}
       propertyPath: m_Color.b

@@ -15,6 +15,7 @@ public class MapButton : MonoBehaviour, IPointerClickHandler
     void Start()
     {
         _renderer = GetComponent<MeshRenderer>();
+        _renderer.materials[materialId].color = InfoManager.instance.lockColor;
         InfoManager.instance.onInfoAdded.AddListener(UpdateGraphic);
         UpdateGraphic(InfoManager.instance.UpdatePinGraphic(eventD.Id));
     }
@@ -31,10 +32,6 @@ public class MapButton : MonoBehaviour, IPointerClickHandler
         {
             _renderer.materials[materialId].color = InfoManager.instance.unlockColor;
         }
-        else
-        {
-            _renderer.materials[materialId].color = InfoManager.instance.lockColor;
-        }
     }
 
     public void UpdateGraphic(string id)
@@ -43,10 +40,6 @@ public class MapButton : MonoBehaviour, IPointerClickHandler
         if (id == eventD.Id)
         {
             _renderer.materials[materialId].color = InfoManager.instance.unlockColor;
-        }
-        else
-        {
-            _renderer.materials[materialId].color = InfoManager.instance.lockColor;
         }
     }
 
