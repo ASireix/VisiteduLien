@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 2010
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Quel est le principal secteur d'activit\xE9 de l'association Envie ?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "En quelle ann\xE9e l'association Envie a \xE9t\xE9 cr\xE9er ?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -1735,7 +1735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: La vie, autrement
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -1763,8 +1763,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 22.5
+  m_fontSizeBase: 22.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2165,7 +2165,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Plus de 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -2617,7 +2617,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Redonner vie aux objets
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -2645,8 +2645,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 22.5
+  m_fontSizeBase: 22.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2722,7 +2722,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -62.3452, y: -16.373}
+  m_SizeDelta: {x: -30.7234, y: -16.373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7382823912429072293
 CanvasRenderer:
@@ -2752,7 +2752,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Soutenir les personnes en difficult\xE9 par le recyclage et la r\xE9insertion
+    professionnelle"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -2780,8 +2781,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9331,7 +9332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Moins de 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -9834,7 +9835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Quel est le slogan de l'association Envie ?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -10602,7 +10603,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -62.3452, y: -16.373}
+  m_SizeDelta: {x: -30.7234, y: -16.373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9187939036853294378
 CanvasRenderer:
@@ -10632,7 +10633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Organiser des \xE9v\xE9nements culturels"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -10660,8 +10661,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10930,7 +10931,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -62.3452, y: -16.373}
+  m_SizeDelta: {x: -30.7234, y: -16.373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8066857680717449963
 CanvasRenderer:
@@ -10960,7 +10961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Promouvoir le sport et les loisirs
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -10988,8 +10989,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -17185,7 +17186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 2000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -18124,7 +18125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: La restauration
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -18152,8 +18153,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 29.2
+  m_fontSizeBase: 29.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18461,7 +18462,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Quelle est la mission principale de l'association Envie ?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -18648,7 +18649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "L'\xE9ducation"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -18676,8 +18677,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 29.2
+  m_fontSizeBase: 29.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20251,7 +20252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Entre 10 et 30
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -20461,7 +20462,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 1984
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -20978,7 +20979,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Entre 30 et 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -21179,7 +21180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 1992
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -21366,7 +21367,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Combien de structures Envie y a-t-il en France ?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -21501,7 +21502,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Nos valeurs redonnent de la valeur
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -21529,8 +21530,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 22.5
+  m_fontSizeBase: 22.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21763,7 +21764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: La construction
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -21791,8 +21792,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 29.2
+  m_fontSizeBase: 29.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21898,7 +21899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Recyclons ensemble
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -21926,8 +21927,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 22.5
+  m_fontSizeBase: 22.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -22085,7 +22086,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "La vente de produits reconditionn\xE9s"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -22113,8 +22114,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 22.9
+  m_fontSizeBase: 22.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -23353,7 +23354,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -62.3452, y: -16.373}
+  m_SizeDelta: {x: -30.7234, y: -16.373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1274830037787741313
 CanvasRenderer:
@@ -23383,7 +23384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Fournir des services de sant\xE9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
   m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
@@ -23411,8 +23412,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

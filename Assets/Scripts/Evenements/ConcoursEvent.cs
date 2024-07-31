@@ -85,7 +85,11 @@ public class ConcoursEvent : Evenement
                             if (userInDB.Key == SETTINGS.playerID)
                             {
                                 formulaire.m_pseudoInputfield.text = user.username;
-                                formulaire.m_emailInputfield.text = user.contact;
+                                string[] cutString = user.contact.Split(';');
+                                string email = cutString[0];
+                                string phone = cutString[1];
+                                formulaire.m_emailInputfield.text = email;
+                                formulaire.m_phoneInputfield.text = phone;
                                 formulaire.m_hideToggle.isOn = !user.hidden;
                             }
                         }

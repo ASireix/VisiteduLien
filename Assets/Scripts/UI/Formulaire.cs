@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class Formulaire : MonoBehaviour
 {
     [Header("Formulaire")]
+    [SerializeField] GameObject formulaireToToggle;
     public TMP_InputField pseudo_Inputfield;
     public TMP_InputField email_Inputfield;
     public TMP_InputField phone_Inputfield;
@@ -38,6 +39,7 @@ public class Formulaire : MonoBehaviour
         {
             LeaderboardEntry entry = new LeaderboardEntry(pseudo_Inputfield.text, email_Inputfield.text, phone_Inputfield.text, !hideToggle.isOn);
             leaderboard.PushElement(entry);
+            formulaireToToggle.SetActive(false);
             if (subscribeToggle.isOn)
             {
 
