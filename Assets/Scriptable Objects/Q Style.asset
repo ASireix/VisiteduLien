@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctColor: {r: 0.12730193, g: 1, b: 0, a: 1}
   incorrectColor: {r: 1, g: 0.041718736, b: 0, a: 1}
-  selectedColor: {r: 0, g: 0.167027, b: 1, a: 1}
-  unselectedColor: {r: 1, g: 0.95686066, b: 0, a: 1}
+  selectedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+  unselectedColor: {r: 1, g: 1, b: 1, a: 1}

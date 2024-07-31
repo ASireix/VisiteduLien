@@ -13,11 +13,12 @@ public class TouchRotation : PressInputBase
     public int yFactor;
 
     Rigidbody rb;
-    Quaternion startRot = Quaternion.identity;
+    Vector3 startRot = Vector3.zero;
+    RectTransform rect;
+    Vector3 startPos;
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        startRot = rb.rotation;
+        Init();
     }
 
     // Update is called once per frame
@@ -51,15 +52,31 @@ public class TouchRotation : PressInputBase
     
     protected override void OnEnable(){
         base.OnEnable();
-        if (!rb) rb = GetComponent<Rigidbody>();
 
-        if (startRot.Equals(Quaternion.identity)){
-            Quaternion worldRotation = transform.parent.rotation * transform.localRotation;
-            startRot = worldRotation;
-        }
-        rb.rotation = startRot;
+        Init();
+        
         //rb.AddTorque(Vector3.right * initialTorque * Time.deltaTime);
         //rb.AddRelativeTorque(initialTorque * Time.deltaTime * Vector3.down);
+    }
+
+    void Init()
+    {
+        if (!rb) rb = GetComponent<Rigidbody>();
+        if (!rect) rect = GetComponent<RectTransform>();
+
+        if (startRot.Equals(Vector3.zero))
+        {
+            Quaternion worldRotation = transform.parent.rotation * transform.localRotation;
+            startRot = worldRotation.eulerAngles;
+        }
+
+        if (startPos == null || startPos.Equals(Vector3.zero))
+        {
+            startPos = rect.position;
+        }
+
+        rb.position = startPos;
+        rb.rotation = Quaternion.Euler(startRot);
     }
 
 }

@@ -37,7 +37,12 @@ public class Dialogue : MonoBehaviour
         }
         #endregion
         _dialogue.Clear();
-
+       
+        if (dialogueBox.dialogueTransitions == null || dialogueBox.dialogueTransitions.Length < 1)
+        {
+            DTBounceSize target = dialogueBox.gameObject.AddComponent(typeof(DTBounceSize)) as DTBounceSize;
+            dialogueBox.dialogueTransitions = new DialogueTransition[] { target };
+        }
     }
 
     public void TriggerDialogue()
@@ -174,20 +179,11 @@ public class Dialogue : MonoBehaviour
 
     public void OpenDialogueBox()
     {
-        dialogueBox.gameObject.SetActive(false);
-        LeanTween.scale(dialogueBox.gameObject, Vector3.zero, 0f).setOnComplete(() =>
-        {
-            dialogueBox.gameObject.SetActive(true);
-            LeanTween.scale(dialogueBox.gameObject, Vector3.one, 1f).setEaseInBounce();
-        });
+        dialogueBox.Open();
     }
 
     public void CloseDialogueBox()
     {
-        LeanTween.scale(dialogueBox.gameObject, Vector3.zero, 1f).setEaseOutBounce().setOnComplete(() =>
-        {
-            dialogueBox.gameObject.SetActive(false);
-        });
-
+        dialogueBox.Close();
     }
 }

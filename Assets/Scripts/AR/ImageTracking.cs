@@ -41,8 +41,12 @@ public class ImageTracking : MonoBehaviour
     bool _tracking = true;
     string lastPrefabName;
 
+    // launch settings for SETTINGS.isGuidee
+    bool startGuidee;
+
     private void Awake()
     {
+        startGuidee = SETTINGS.isGuidee;
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
         Evenement.onEventCompleted.AddListener(ReactivateARSession);
         foreach (var item in placeablePrefabs)
@@ -94,6 +98,7 @@ public class ImageTracking : MonoBehaviour
         backgroundForFlat.gameObject.SetActive(false);
         aRSession.GetComponent<ARSession>().enabled = true;
         aRSession.Reset();
+        SETTINGS.isGuidee = startGuidee;
         isInEvent = false;
     }
 
@@ -166,7 +171,7 @@ public class ImageTracking : MonoBehaviour
         if (imagesProgress[trackedImage].progress > 0.99f)
         {
             SpawnEvent(prefab, trackedImage, name);
-            isInEvent = true;
+            
         }
     }
 
@@ -225,6 +230,7 @@ public class ImageTracking : MonoBehaviour
 
     void SpawnEvent(GameObject prefab, ARTrackedImage trackedImage, string name)
     {
+        if (isInEvent) return;
         imagesProgress[trackedImage].refreshed = false;
         imagesProgress[trackedImage].progress = 0f;
         onScanProgress.Invoke(imagesProgress[trackedImage].progress);
@@ -244,6 +250,38 @@ public class ImageTracking : MonoBehaviour
             rectTransform.SetBottom(min.y);
             aRSession.GetComponent<ARSession>().enabled = false;
         }
+        isInEvent = true;
         imagesProgress[trackedImage].cooldown = eventCooldown;
+    }
+
+    public void SpawnEventCustom(EvenementScriptableObject evt)
+    {
+        if (isInEvent) return;
+        GameObject prefab = spawnedPrefabs[evt.name].Item1;
+
+        prefab.SetActive(true);
+
+        if (evt.useFlatEvent)
+        {
+            backgroundForFlat.gameObject.SetActive(true);
+            backgroundForFlat.sprite = evt.backgroundImageForFlatEvent;
+            RectTransform rectTransform = backgroundForFlat.GetComponent<RectTransform>();
+            Vector2 max = evt.right_top;
+            Vector2 min = evt.left_bottom;
+            rectTransform.SetTop(max.y);
+            rectTransform.SetLeft(min.x);
+            rectTransform.SetRight(max.x);
+            rectTransform.SetBottom(min.y);
+            aRSession.GetComponent<ARSession>().enabled = false;
+        }
+        isInEvent = true;
+
+        foreach (var key in imagesProgress)
+        {
+            key.Value.refreshed = false;
+            key.Value.progress = 0f;
+            onScanProgress.Invoke(key.Value.progress);
+            key.Value.cooldown = eventCooldown;
+        }
     }
 }

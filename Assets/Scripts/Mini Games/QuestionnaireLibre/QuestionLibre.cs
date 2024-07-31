@@ -26,6 +26,9 @@ public class QuestionLibre : TextBoxContainer
 
     [Tooltip("Leave at 0 for infinite try")]
     [SerializeField] int maxNumberOfTry = 0;
+    [SerializeField] int numberOfTryToGetTips = 2;
+    [SerializeField] List<Indice> tips;
+    [SerializeField] float tipsSlideDistance;
 
     int currentTry = 0;
 
@@ -39,6 +42,7 @@ public class QuestionLibre : TextBoxContainer
     void ResetQuestion()
     {
         textBox.ToggleBox(false, BoxToggleType.Disable);
+        currentTry = 0;
         answerField.HideReponse();
     }
 
@@ -53,6 +57,12 @@ public class QuestionLibre : TextBoxContainer
     public void FinishQuestionLibre()
     {
         answerField.HideReponse();
+        
+        foreach (Indice indice in tips)
+        {
+            Vector2 dist = new Vector2(tipsSlideDistance, indice.indiceGraphic.localPosition.y);
+            LeanTween.move(indice.indiceGraphic, dist, 1f);
+        }
         textBox.ToggleBox(false);
     }
 
@@ -86,6 +96,15 @@ public class QuestionLibre : TextBoxContainer
             {
 
             }
+
+            foreach(Indice indice in tips)
+            {
+                if (indice.numberOfTry == currentTry)
+                {
+                    Vector2 diste = new Vector2(-tipsSlideDistance, indice.indiceGraphic.localPosition.y);
+                    LeanTween.move(indice.indiceGraphic, diste, 1f);
+                }
+            }
             Debug.Log("BAD, diff is " + dist);
             onWrongAnswer?.Invoke();
         }
@@ -114,4 +133,11 @@ public class QuestionLibre : TextBoxContainer
     {
         currentTry = 0;
     }
+}
+
+[System.Serializable]
+class Indice
+{
+    public RectTransform indiceGraphic;
+    public int numberOfTry;
 }

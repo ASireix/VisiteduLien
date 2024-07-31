@@ -17,7 +17,7 @@ public class QRScanner : MonoBehaviour
     }
 
     public void HideScanner(EventData a = null){
-        if (!qrcanvas.gameObject.activeInHierarchy){return;}
+        if (!qrcanvas.gameObject.activeInHierarchy && qrcanvas.alpha == 0) {return;}
         LeanTween.value(1f,0f,fadeSpeed).setOnUpdate((float value)=>{
             qrcanvas.alpha = value;
         }).setOnComplete(()=>{
@@ -26,7 +26,7 @@ public class QRScanner : MonoBehaviour
     }
 
     public void ShowScanner(EventData a = null){
-        if (qrcanvas.gameObject.activeInHierarchy){return;}
+        if (qrcanvas.gameObject.activeInHierarchy && qrcanvas.alpha == 1) {return;}
         LeanTween.value(0f,1f,fadeSpeed).setOnUpdate((float value)=>{
             qrcanvas.alpha = value;
         }).setOnComplete(()=>{

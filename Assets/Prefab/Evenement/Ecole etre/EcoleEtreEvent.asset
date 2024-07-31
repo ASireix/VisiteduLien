@@ -16,7 +16,7 @@ MonoBehaviour:
   arEvent: {fileID: 6686227301251695680, guid: 32821bea4b110e5a086716afb988cb27, type: 3}
   flatEvent: {fileID: 6686227301251695680, guid: 32821bea4b110e5a086716afb988cb27,
     type: 3}
-  backgroundImageForFlatEvent: {fileID: 21300000, guid: 66f8cf407f3bf20359ba624289c5fdfb,
+  backgroundImageForFlatEvent: {fileID: 21300000, guid: 5483414acaed8e24d855da3c69a1ea35,
     type: 3}
   right_top: {x: -133, y: -55}
   left_bottom: {x: -133, y: -55}

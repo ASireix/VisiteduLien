@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ed8b140537683a09aa0770040cbf4a, type: 3}
   m_Name: BAT A - Intro G
   m_EditorClassIdentifier: 
-  pastebinURL: https://pastebin.com/raw/iMP8gTBa
+  pastebinURL: https://pastebin.com/raw/RJYJyRQt
   textFile: {fileID: 4900000, guid: c9f2941d2fdbd3c4db7c4291b07afc1b, type: 3}
-  _persistantTextFile: "Sommes nous bien devant le b\xE2timent A ?\r\n \r\nJe suis
-    d\xE9sol\xE9 de te l'apprendre mais on dirait que ma m\xE9moire me joue des tours.\r\n
-    \r\nJ'ai oubli\xE9 ce que je devais dire. Mais pas de panique, termines ce mini
-    jeu et d\xE9bloque l'\xE9v\xE8nement sur la carte."
+  _persistantTextFile: "Voici le b\xE2timent A. Il est actuellement en pleine r\xE9novation
+    ! Il s'agit de l'ancien b\xE2timent administratif de l'ancienne usine.\r\n\r\nDe
+    nouveaux r\xE9sidents ont pr\xE9vu de s'y implanter comme par exemple, une brocante,
+    un collectif d'entrepreneurs et de nouveaux bureaux pour des associations et
+    des entreprises.\r\n\r\nC'est excitant de voir comment ce b\xE2timent se transformer
+    !\r\n\r\nMaintenant que tu sais tout \xE7a. Je te d\xE9bloque ce b\xE2timent
+    sur ta carte."

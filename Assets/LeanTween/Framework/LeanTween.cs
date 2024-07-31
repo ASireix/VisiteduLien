@@ -197,6 +197,7 @@ public enum TweenAction{
     CANVAS_SCALE,
     CANVAS_SIZEDELTA,
     FOLLOW,
+    IMAGE_COLOR,
     NONE
 }
 
@@ -1239,7 +1240,11 @@ public class LeanTween : MonoBehaviour {
     public static LTDescr colorText(RectTransform rectTransform, Color to, float time){
         return pushNewTween(rectTransform.gameObject, new Vector3(1.0f, to.a, 0.0f), time, options().setTextColor().setPoint(new Vector3(to.r, to.g, to.b)));
     }
-    #endif
+    public static LTDescr imageColor(RectTransform rectTransform, Color to, float time)
+    {
+        return pushNewTween(rectTransform.gameObject, new Vector3(1.0f, to.a, 0.0f), time, options().setImageColor().setPoint(new Vector3(to.r, to.g, to.b)));
+    }
+#endif
 
     /**
     * <summary>Call a method after a specified amount of time</summary>

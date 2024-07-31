@@ -9,6 +9,9 @@ public class DialogueBox : MonoBehaviour, IPointerClickHandler
     [SerializeField] BoucingSize skipDot; // appear when you can advance the dialogue
 
     [SerializeField] GameObject[] additionalBoxes;
+    public DialogueTransition[] dialogueTransitions;
+
+
     public void UseDialogueBox(Dialogue dial, BoucingSize skip = null)
     {
         if (skip) skipDot = skip;
@@ -54,6 +57,19 @@ public class DialogueBox : MonoBehaviour, IPointerClickHandler
         _dialogue.AdvanceDialogue();
     }
 
+    public void Open()
+    {
+        for (int i =0; i< dialogueTransitions.Length; i++)
+        {
+            dialogueTransitions[i].TriggerOpenTransition(this);
+        }
+    }
 
-
+    public void Close()
+    {
+        for (int i = 0; i < dialogueTransitions.Length; i++)
+        {
+            dialogueTransitions[i].TriggerCloseTransition(this);
+        }
+    }
 }

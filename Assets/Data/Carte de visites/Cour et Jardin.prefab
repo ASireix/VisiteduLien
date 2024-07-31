@@ -1202,7 +1202,7 @@ PrefabInstance:
     - target: {fileID: 7479415429668552005, guid: 4714c57e0194516438ea26ec07e033a3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: https://www.facebook.com/UsineCourJardin
+      value: www.facebook.com/UsineCourJardin
       objectReference: {fileID: 0}
     - target: {fileID: 9098493901398535450, guid: 4714c57e0194516438ea26ec07e033a3,
         type: 3}

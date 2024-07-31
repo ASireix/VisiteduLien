@@ -5,13 +5,15 @@ using UnityEngine;
 public class LeaderboardEntry
 {
     public string pseudo;
-    public string contact;
+    public string email;
+    public string phone;
     public bool hidden;
 
-    public LeaderboardEntry(string pseudo, string contact, bool hidden)
+    public LeaderboardEntry(string pseudo, string email, string phone, bool hidden)
     {
         this.pseudo = pseudo;
-        this.contact = contact;
+        this.email = email;
+        this.phone = phone;
         this.hidden = hidden;
     }
 }

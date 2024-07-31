@@ -81,11 +81,11 @@ public class ConcoursEvent : Evenement
                         foreach (var userInDB in dataSnapshot.Children)
                         {
                             User user = JsonUtility.FromJson<User>(userInDB.GetRawJsonValue());
-                            users.Add(user);
+                            if (!user.hidden) users.Add(user);
                             if (userInDB.Key == SETTINGS.playerID)
                             {
                                 formulaire.m_pseudoInputfield.text = user.username;
-                                formulaire.m_contactInputfield.text = user.contact;
+                                formulaire.m_emailInputfield.text = user.contact;
                                 formulaire.m_hideToggle.isOn = !user.hidden;
                             }
                         }

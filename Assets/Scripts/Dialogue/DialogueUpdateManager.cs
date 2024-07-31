@@ -59,7 +59,6 @@ public class DialogueUpdateManager : MonoBehaviour
                 errors++;
             }
             float p = Mathf.Clamp01((float)(i + 1) / unitAssetPack.TextFiles.Length);
-            Debug.Log("THiSIS PROHRESS : " + p);
             onProgress?.Invoke(p);
             yield return null;
         }

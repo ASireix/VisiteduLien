@@ -40,6 +40,21 @@ public class InfoManager : MonoBehaviour
         }
     }
 
+    public void ShowInfo(EventData eventD)
+    {
+        if (infoDico.TryGetValue(eventD.Id, out GameObject info))
+        {
+            info.SetActive(true);
+        }
+        else
+        {
+            GameObject obj = Instantiate(eventD.objectToShow);
+            obj.transform.SetParent(transform, false);
+            obj.SetActive(true);
+            infoDico.TryAdd(eventD.Id, obj);
+        }
+    }
+
     public void AddInfo(string id, GameObject info)
     {
         GameObject obj = Instantiate(info);

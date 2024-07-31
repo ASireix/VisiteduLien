@@ -18,5 +18,5 @@ MonoBehaviour:
     type: 3}
   backgroundImageForFlatEvent: {fileID: 21300000, guid: 3908ec85d20b6394cb8b40e65d81e66b,
     type: 3}
-  right_top: {x: 0, y: 0}
-  left_bottom: {x: 0, y: 0}
+  right_top: {x: -52, y: -117}
+  left_bottom: {x: -52, y: -117}

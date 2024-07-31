@@ -1230,6 +1230,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7479415429668552005, guid: 4714c57e0194516438ea26ec07e033a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: www.facebook.com/epiceriechezaurore
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819197024676585982, guid: 4714c57e0194516438ea26ec07e033a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: www.instagram.com/chez_aurore/?hl=fr
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -11,18 +11,36 @@ public class MapButton : MonoBehaviour, IPointerClickHandler
     [SerializeField] bool lookAtCam;
     [SerializeField] int materialId;
     MeshRenderer _renderer;
+    [HideInInspector]
+    public bool forceUnlock;
 
     void Start()
     {
         _renderer = GetComponent<MeshRenderer>();
         _renderer.materials[materialId].color = InfoManager.instance.lockColor;
         InfoManager.instance.onInfoAdded.AddListener(UpdateGraphic);
-        UpdateGraphic(InfoManager.instance.UpdatePinGraphic(eventD.Id));
+        if (forceUnlock)
+        {
+            UpdateGraphic(true);
+        }
+        else
+        {
+            UpdateGraphic(InfoManager.instance.UpdatePinGraphic(eventD.Id));
+        }
+        
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        InfoManager.instance.ShowInfo(eventD.Id);
+        if (forceUnlock)
+        {
+            InfoManager.instance.ShowInfo(eventD);
+        }
+        else
+        {
+            InfoManager.instance.ShowInfo(eventD.Id);
+        }
+        
     }
 
     public void UpdateGraphic(bool yes)

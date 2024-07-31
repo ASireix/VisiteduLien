@@ -67,7 +67,7 @@ public class Question : TextBoxContainer
     public void ResetAllReponses(){
         selectedAnswer = null;
         foreach(var rep in reponses){
-            rep.Reset();
+            rep.ResetRep();
         }
     }
 

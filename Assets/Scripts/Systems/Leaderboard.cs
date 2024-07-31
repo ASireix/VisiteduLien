@@ -46,7 +46,7 @@ public class Leaderboard : MonoBehaviour
     public async void PushElement(LeaderboardEntry entry)
     {
         var writeTask = FirebaseStartupManager.instance.
-            WriteUser(entry.pseudo, entry.contact, SETTINGS.score, entry.hidden, true, SETTINGS.playerID, GetRndTitle());
+            WriteUser(entry.pseudo, $"Email = {entry.email}; Téléphone = {entry.phone}", SETTINGS.score, entry.hidden, true, SETTINGS.playerID, GetRndTitle());
         if (await Task.WhenAny(writeTask,Task.Delay(2000)) == writeTask){
             successDialogue.TriggerDialogue();
             SETTINGS.isGiveaway = true;
