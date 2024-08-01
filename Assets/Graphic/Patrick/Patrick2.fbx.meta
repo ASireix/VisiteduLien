@@ -96,7 +96,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: rig.001|Idle
+      name: Idle
       takeName: rig.001|Idle
       internalID: 236967887387751247
       firstFrame: 0

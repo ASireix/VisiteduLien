@@ -4313,7 +4313,19 @@ MonoBehaviour:
   dialogueData: {fileID: 11400000, guid: f8156d4113e300edfb1ef1dcdf524c10, type: 2}
   onDialogueComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4612657768885864940}
+        m_TargetAssemblyTypeName: PatrickMovement, Assembly-CSharp
+        m_MethodName: MoveUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1816483003331948064
 GameObject:
   m_ObjectHideFlags: 0
@@ -7406,6 +7418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3314582342153492445}
   - component: {fileID: 3457045516190913037}
+  - component: {fileID: 4612657768885864940}
   m_Layer: 0
   m_Name: Patrick
   m_TagString: Untagged
@@ -7421,15 +7434,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2824603791367895215}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.027174624, y: -0.09980354, z: -0.0027267602, w: 0.9946323}
-  m_LocalPosition: {x: 0.97, y: -0.48, z: 7.33}
+  m_LocalRotation: {x: -0.0000038396106, y: -0.1267649, z: -0.0072671804, w: 0.99190617}
+  m_LocalPosition: {x: 1.13, y: -0.33, z: 6.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6959259215354974030}
   - {fileID: 3034657898493819882}
   m_Father: {fileID: 6001121656979722981}
-  m_LocalEulerAnglesHint: {x: -3.13, y: -11.46, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.106, y: -14.565, z: -0.826}
 --- !u!114 &3457045516190913037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7446,6 +7459,35 @@ MonoBehaviour:
   onStartEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4612657768885864940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2824603791367895215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88be64ec32e449043b1529ac2d1f1d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upPosition:
+    Position: {x: 0.1, y: 6.09, z: 3.45}
+    Rotation: {x: 21.414, y: -2.891, z: -1.211}
+  downPosition:
+    Position: {x: 1.13, y: -0.33, z: 6.16}
+    Rotation: {x: -0.106, y: -14.565, z: -0.826}
+  leftPosition:
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+  rightPosition:
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+  customPosition:
+    Position: {x: 0.1, y: 6.09, z: 3.45}
+    Rotation: {x: 21.414, y: -2.891, z: -1.211}
+  transformRef: {fileID: 3314582342153492445}
+  speed: 2
 --- !u!1 &2825755955870186612
 GameObject:
   m_ObjectHideFlags: 0
@@ -10042,7 +10084,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onMiniGameFinished:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4612657768885864940}
+        m_TargetAssemblyTypeName: PatrickMovement, Assembly-CSharp
+        m_MethodName: MoveDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hideAllQuestionAtStart: 1
   questions:
   - {fileID: 1465975519609698744}
