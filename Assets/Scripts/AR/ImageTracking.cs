@@ -25,7 +25,9 @@ public class ImageTracking : MonoBehaviour
 {
     [SerializeField] EvenementScriptableObject[] placeablePrefabs;
 
-    Dictionary<string, (GameObject, EvenementScriptableObject)> spawnedPrefabs
+    Dictionary<string, (GameObject, EvenementScriptableObject)> spawnedFlatPrefabs
+    = new Dictionary<string, (GameObject, EvenementScriptableObject)>();
+    Dictionary<string, (GameObject, EvenementScriptableObject)> spawnedARPrefabs
     = new Dictionary<string, (GameObject, EvenementScriptableObject)>();
     public ARTrackedImageManager trackedImageManager;
     [SerializeField] XRReferenceImageLibrary runtimeImageLibrary;
@@ -52,23 +54,23 @@ public class ImageTracking : MonoBehaviour
         foreach (var item in placeablePrefabs)
         {
             GameObject newPrefab;
-
-            if (item.useFlatEvent)
-            {
-                newPrefab = Instantiate(item.flatEvent.gameObject, Vector3.zero, Quaternion.identity);
-                newPrefab.transform.parent = Camera.main.transform;
-                spawnedPrefabs.Add(item.name, (newPrefab, item));
-                newPrefab.SetActive(false);
-            }
-            else
+            //Only spawn the ar event if you can
+            if (item.arEvent != null)
             {
                 GameObject anchor = new GameObject(item.name, typeof(ARAnchor));
                 newPrefab = Instantiate(item.arEvent.gameObject, Vector3.zero, Quaternion.identity);
                 newPrefab.transform.parent = anchor.transform;
-                spawnedPrefabs.Add(item.name, (anchor, item));
+                spawnedARPrefabs.Add(item.name, (anchor, item));
                 anchor.SetActive(false);
+                newPrefab.name = item.name;
             }
+            //All events require a flat event to have list of mini game working
+            newPrefab = Instantiate(item.flatEvent.gameObject, Vector3.zero, Quaternion.identity);
+            newPrefab.transform.parent = Camera.main.transform;
+            spawnedFlatPrefabs.Add(item.name, (newPrefab, item));
+            newPrefab.SetActive(false);
             newPrefab.name = item.name;
+
             lastPrefabName = item.name;
         }
     }
@@ -128,7 +130,7 @@ public class ImageTracking : MonoBehaviour
         {
             //Debug.Log("Image Removde");
             imagesProgress[trackedImage].progress = 0f;
-            if (spawnedPrefabs.TryGetValue(trackedImage.referenceImage.name,
+            if (spawnedFlatPrefabs.TryGetValue(trackedImage.referenceImage.name,
             out (GameObject, EvenementScriptableObject) value))
             {
                 value.Item1.SetActive(false);
@@ -140,13 +142,13 @@ public class ImageTracking : MonoBehaviour
     {
         await Task.Delay(2000);
         Debug.Log("lastPrefabname = " + lastPrefabName);
-        GameObject prefab = spawnedPrefabs[lastPrefabName].Item1;
+        GameObject prefab = spawnedFlatPrefabs[lastPrefabName].Item1;
         prefab.SetActive(true);
 
-        if (spawnedPrefabs[lastPrefabName].Item2.useFlatEvent)
+        if (spawnedFlatPrefabs[lastPrefabName].Item2.useFlatEvent)
         {
             backgroundForFlat.gameObject.SetActive(true);
-            backgroundForFlat.sprite = spawnedPrefabs[lastPrefabName].Item2.backgroundImageForFlatEvent;
+            backgroundForFlat.sprite = spawnedFlatPrefabs[lastPrefabName].Item2.backgroundImageForFlatEvent;
             aRSession.GetComponent<ARSession>().enabled = false;
         }
 
@@ -155,12 +157,12 @@ public class ImageTracking : MonoBehaviour
     void UpdateImage(ARTrackedImage trackedImage)
     {
         if (!_tracking) return;
+        //Use the name to get the corresponding prefab
         string name = trackedImage.referenceImage.name;
         trackedImage.transform.GetPositionAndRotation(out Vector3 position, out Quaternion rotation);
-        GameObject prefab = spawnedPrefabs[name].Item1;
         //Debug.Log("Tracked image named " + name + " is at cooldown : " + imagesProgress[trackedImage].cooldown+" and is refreshed ? : "+ imagesProgress[trackedImage].refreshed);
-        
-        bool state = UpdatePrefabPosition(prefab, trackedImage, name, position, rotation);
+
+        bool state = UpdatePrefabPosition(trackedImage, name, position, rotation);
         //Keep the ar evenement in place and stop the scan progression
         if (state || isInEvent) return;
 
@@ -170,24 +172,30 @@ public class ImageTracking : MonoBehaviour
         //Spawn the event
         if (imagesProgress[trackedImage].progress > 0.99f)
         {
-            SpawnEvent(prefab, trackedImage, name);
+            SpawnEvent(trackedImage, name);
             
         }
     }
 
-    bool UpdatePrefabPosition(GameObject prefab, ARTrackedImage trackedImage, string name, Vector3 position, Quaternion rotation)
+    bool UpdatePrefabPosition(ARTrackedImage trackedImage, string name, Vector3 position, Quaternion rotation)
     {
-        bool state = prefab.activeInHierarchy;
-        // If it's spawner, you update the position and rotation and 
-        if (state)
+        //Check if there are AR events
+        bool state = false;
+        GameObject prefab;
+        if (spawnedARPrefabs.TryGetValue(name,out (GameObject,EvenementScriptableObject) value))
         {
-            imagesProgress[trackedImage].progress = 0f;
-            if (!spawnedPrefabs[name].Item2.useFlatEvent)
+            prefab = value.Item1;
+            state = prefab.activeInHierarchy;
+            // If it's spawner, you update the position and rotation and
+            if (state)
             {
+                imagesProgress[trackedImage].progress = 0f;
                 prefab.transform.SetPositionAndRotation(position, rotation);
+                DisableInactiveEvents(name);
             }
-            DisableInactiveEvents(name);
         }
+        state = state || spawnedFlatPrefabs[name].Item1.activeInHierarchy;
+        
         return state;
     }
 
@@ -219,7 +227,15 @@ public class ImageTracking : MonoBehaviour
 
     void DisableInactiveEvents(string name)
     {
-        foreach (var go in spawnedPrefabs.Values)
+        foreach (var go in spawnedFlatPrefabs.Values)
+        {
+            if (go.Item1.name != name)
+            {
+                go.Item1.SetActive(false);
+            }
+        }
+
+        foreach (var go in spawnedARPrefabs.Values)
         {
             if (go.Item1.name != name)
             {
@@ -228,28 +244,34 @@ public class ImageTracking : MonoBehaviour
         }
     }
 
-    void SpawnEvent(GameObject prefab, ARTrackedImage trackedImage, string name)
+    void SpawnEvent(ARTrackedImage trackedImage, string name)
     {
         if (isInEvent) return;
         imagesProgress[trackedImage].refreshed = false;
         imagesProgress[trackedImage].progress = 0f;
         onScanProgress.Invoke(imagesProgress[trackedImage].progress);
 
-        prefab.SetActive(true);
+        GameObject prefab;
 
-        if (spawnedPrefabs[name].Item2.useFlatEvent)
+        if (spawnedFlatPrefabs[name].Item2.useFlatEvent)
         {
+            prefab = spawnedFlatPrefabs[name].Item1;
             backgroundForFlat.gameObject.SetActive(true);
-            backgroundForFlat.sprite = spawnedPrefabs[name].Item2.backgroundImageForFlatEvent;
+            backgroundForFlat.sprite = spawnedFlatPrefabs[name].Item2.backgroundImageForFlatEvent;
             RectTransform rectTransform = backgroundForFlat.GetComponent<RectTransform>();
-            Vector2 max = spawnedPrefabs[name].Item2.right_top;
-            Vector2 min = spawnedPrefabs[name].Item2.left_bottom;
+            Vector2 max = spawnedFlatPrefabs[name].Item2.right_top;
+            Vector2 min = spawnedFlatPrefabs[name].Item2.left_bottom;
             rectTransform.SetTop(max.y);
             rectTransform.SetLeft(min.x);
             rectTransform.SetRight(max.x);
             rectTransform.SetBottom(min.y);
             aRSession.GetComponent<ARSession>().enabled = false;
         }
+        else
+        {
+            prefab = spawnedARPrefabs[name].Item1;
+        }
+        prefab.SetActive(true);
         isInEvent = true;
         imagesProgress[trackedImage].cooldown = eventCooldown;
     }
@@ -257,23 +279,21 @@ public class ImageTracking : MonoBehaviour
     public void SpawnEventCustom(EvenementScriptableObject evt)
     {
         if (isInEvent) return;
-        GameObject prefab = spawnedPrefabs[evt.name].Item1;
+        GameObject prefab = spawnedFlatPrefabs[evt.name].Item1;
 
         prefab.SetActive(true);
 
-        if (evt.useFlatEvent)
-        {
-            backgroundForFlat.gameObject.SetActive(true);
-            backgroundForFlat.sprite = evt.backgroundImageForFlatEvent;
-            RectTransform rectTransform = backgroundForFlat.GetComponent<RectTransform>();
-            Vector2 max = evt.right_top;
-            Vector2 min = evt.left_bottom;
-            rectTransform.SetTop(max.y);
-            rectTransform.SetLeft(min.x);
-            rectTransform.SetRight(max.x);
-            rectTransform.SetBottom(min.y);
-            aRSession.GetComponent<ARSession>().enabled = false;
-        }
+        backgroundForFlat.gameObject.SetActive(true);
+        backgroundForFlat.sprite = evt.backgroundImageForFlatEvent;
+        RectTransform rectTransform = backgroundForFlat.GetComponent<RectTransform>();
+        Vector2 max = evt.right_top;
+        Vector2 min = evt.left_bottom;
+        rectTransform.SetTop(max.y);
+        rectTransform.SetLeft(min.x);
+        rectTransform.SetRight(max.x);
+        rectTransform.SetBottom(min.y);
+        aRSession.GetComponent<ARSession>().enabled = false;
+
         isInEvent = true;
 
         foreach (var key in imagesProgress)

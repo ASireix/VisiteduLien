@@ -47,7 +47,7 @@ public class Leaderboard : MonoBehaviour
     {
         var writeTask = FirebaseStartupManager.instance.
             WriteUser(entry.pseudo, $"Email = {entry.email}; Téléphone = {entry.phone}", SETTINGS.score, entry.hidden, true, SETTINGS.playerID, GetRndTitle());
-        if (await Task.WhenAny(writeTask,Task.Delay(2000)) == writeTask){
+        if (await Task.WhenAny(writeTask,Task.Delay(10000)) == writeTask){
             successDialogue.TriggerDialogue();
             SETTINGS.isGiveaway = true;
             onDBUpdates?.Invoke();

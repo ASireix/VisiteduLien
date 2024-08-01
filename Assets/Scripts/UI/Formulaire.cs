@@ -42,7 +42,7 @@ public class Formulaire : MonoBehaviour
             formulaireToToggle.SetActive(false);
             if (subscribeToggle.isOn)
             {
-
+                MailChimpNewsletter.AddSubscriber(pseudo_Inputfield.text, email_Inputfield.text);
             }
         }
         else
