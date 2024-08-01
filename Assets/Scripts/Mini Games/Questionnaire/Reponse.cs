@@ -10,7 +10,7 @@ public abstract class Reponse : TextBoxContainer
 
     protected bool answered;
     protected Coroutine shineCoro;
-
+    /*
     protected void OnValidate()
     {
         if (!string.IsNullOrEmpty(reponseText))
@@ -19,7 +19,7 @@ public abstract class Reponse : TextBoxContainer
             textBox.WriteText(reponseText, true);
         }
     }
-
+    */
     protected override void OnStart()
     {
         textBox.onClickEvent.AddListener(SelectAnswer);

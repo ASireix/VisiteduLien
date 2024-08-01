@@ -1461,7 +1461,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 976898808}
           m_TargetAssemblyTypeName: Patrick, Assembly-CSharp
-          m_MethodName: LaunchAnimation
+          m_MethodName: LaunchAnimationSingle
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1490,19 +1490,7 @@ MonoBehaviour:
     eventIdentifier: ActiveMap
   - eventToTrigger:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 775506101}
-          m_TargetAssemblyTypeName: Tutorial, Assembly-CSharp
-          m_MethodName: ShowScanButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
     eventIdentifier: ActiveScan
   - eventToTrigger:
       m_PersistentCalls:
@@ -1536,6 +1524,22 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     eventIdentifier: Reset
+  - eventToTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 976898808}
+          m_TargetAssemblyTypeName: Patrick, Assembly-CSharp
+          m_MethodName: LaunchAnimation
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Point
+            m_BoolArgument: 0
+          m_CallState: 2
+    eventIdentifier: PointLong
   dialogueData: {fileID: 11400000, guid: 181d96c36037890f6b4bdd9e07c78592, type: 2}
   onDialogueComplete:
     m_PersistentCalls:
@@ -5416,12 +5420,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1620099304}
   - {fileID: 1465358113}
   - {fileID: 1334822655}
   - {fileID: 1842283883}
   - {fileID: 960505985}
   - {fileID: 1007112259}
+  - {fileID: 1620099304}
   - {fileID: 1809340424}
   - {fileID: 1218105264}
   - {fileID: 1709554310}

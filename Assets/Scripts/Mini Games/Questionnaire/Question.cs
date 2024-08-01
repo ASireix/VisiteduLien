@@ -21,12 +21,12 @@ public class Question : TextBoxContainer
 
     public UnityEvent onCorrectAnswer = new UnityEvent();
     public UnityEvent onWrongAnswer = new UnityEvent();
-
+    /*
     private void OnValidate()
     {
         if (!string.IsNullOrEmpty(questionText)) textBox.WriteText(questionText, true);
     }
-
+    */
     public void AskQuestion()
     {
         textBox.ToggleBox(true);
