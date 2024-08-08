@@ -1317,7 +1317,7 @@ MonoBehaviour:
     votre fid\xE8le gardien et guide \xE0 travers ce lieu charg\xE9 d'histoire.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24b6eab6271bb6c75bfee4a06e410ac7, type: 2}
-  m_sharedMaterial: {fileID: 9098456217303291748, guid: 4094747eebcc1ef71be04e908ca1ff72,
+  m_sharedMaterial: {fileID: 4356485100743809492, guid: 24b6eab6271bb6c75bfee4a06e410ac7,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.55
+  m_fontSize: 4.15
   m_fontSizeBase: 4.18
   m_fontWeight: 400
   m_enableAutoSizing: 1

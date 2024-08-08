@@ -1,4 +1,5 @@
 using Firebase;
+using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Extensions;
 using System.Collections;
@@ -12,6 +13,7 @@ public class FirebaseStartupManager : MonoBehaviour
     public static FirebaseStartupManager instance;
 
     public DatabaseReference databaseReference { get; private set; }
+    FirebaseAuth auth;
 
     bool _appInitialized = false;
     bool _dbInitialized = false;
@@ -42,15 +44,17 @@ public class FirebaseStartupManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    async void Start()
     {
-        InitAsync();
+        await AnonymusAuth();
+        await InitAsync();
         DontDestroyOnLoad(gameObject);
     }
 
     async Task InitAsync()
     {
         await InitApp();
+        
         InitDatabase();
 
         if (cleanGiveawayDB)
@@ -92,6 +96,27 @@ public class FirebaseStartupManager : MonoBehaviour
                 });
         }
         await UpdateGiveawaySettingsAsync();
+    }
+
+    async Task AnonymusAuth()
+    {
+        auth = FirebaseAuth.DefaultInstance;
+        await auth.SignInAnonymouslyAsync().ContinueWith(task => {
+            if (task.IsCanceled)
+            {
+                Debug.LogError("SignInAnonymouslyAsync was canceled.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.LogError("SignInAnonymouslyAsync encountered an error: " + task.Exception);
+                return;
+            }
+
+            AuthResult result = task.Result;
+            Debug.LogFormat("User signed in successfully: {0} ({1})",
+                result.User.DisplayName, result.User.UserId);
+        });
     }
 
     async Task UpdateGiveawaySettingsAsync()

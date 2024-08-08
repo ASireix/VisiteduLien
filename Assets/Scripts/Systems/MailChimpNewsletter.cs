@@ -9,7 +9,6 @@ using UnityEngine;
 public class MailChimpNewsletter : MonoBehaviour
 {
     private const string dataCenter = "us18"; // At the end of the API Key
-    private const string apiKey = "74ca732aa50e8aa93aeb10d512a2ef4c-us18";
     private const string listId = "71edcd6438"; // Found in audience settings
 
     // Utility method to add a subscriber
@@ -19,7 +18,7 @@ public class MailChimpNewsletter : MonoBehaviour
         string requestJson = "{\"email_address\": \"" + email + "\", \"status\": \"subscribed\", \"merge_fields\": {\"FNAME\": \"" + name + "\"}}";
 
         // This will add the subscriber to Mailchimp
-        CallMailchimpApi(dataCenter, $"lists/{listId}/members", requestJson, apiKey);
+        CallMailchimpApi(dataCenter, $"lists/{listId}/members", requestJson, Config.MailchimpAPIKey);
     }
     private static void CallMailchimpApi(string dataCenter, string method, string requestJson, string key)
     {

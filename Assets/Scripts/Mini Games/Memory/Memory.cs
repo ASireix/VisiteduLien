@@ -9,6 +9,8 @@ public class Memory : Minigame
     [SerializeField] float spacingX;
     [SerializeField] float spacingY;
     [SerializeField] int column;
+    [SerializeField] Vector3 selectedPositionCardFirst;
+    [SerializeField] Vector3 selectedPositionCardSecond;
 
     [Header("Parameters")]
     [SerializeField] bool launchOnStart;
@@ -16,12 +18,14 @@ public class Memory : Minigame
     [SerializeField] List<MemoryCardParameter> memoryCards;
     [SerializeField] Texture2D backface;
     int[] _idsTableRepartitionTable;
-    Dictionary<MemoryCard, int> memoryCardDico = new Dictionary<MemoryCard, int>();
+    Dictionary<MemoryCard, int> _memoryCardDico = new Dictionary<MemoryCard, int>();
     [SerializeField] MemoryCard cardPrefab;
     List<MemoryCard> _selectedCards = new List<MemoryCard>();
 
     int maxPoint;
-    int currentPoint;
+    int _currentPoint;
+    int _displayedCard;
+    bool _waitingForCall;
 
     void Start()
     {
@@ -31,14 +35,14 @@ public class Memory : Minigame
     public override void StartMiniGame()
     {
         Debug.Log("Calling mji game");
-        currentPoint = 0;
+        _currentPoint = 0;
         maxPoint = memoryCards.Count;
-        foreach (var item in memoryCardDico)
+        foreach (var item in _memoryCardDico)
         {
             Destroy(item.Key);
         }
 
-        memoryCardDico.Clear();
+        _memoryCardDico.Clear();
         foreach (Transform item in transform)
         {
             Destroy(item.gameObject);
@@ -51,7 +55,6 @@ public class Memory : Minigame
         {
             _idsTableRepartitionTable[index] = i;
             _idsTableRepartitionTable[index + 1] = i;
-
 
             index += 2;
         }
@@ -70,7 +73,8 @@ public class Memory : Minigame
             card.Init(memoryCards[j].face, backface, j, memoryCards[j].tiling, memoryCards[j].offset);
             card.onDeselect.AddListener(RemoveCards);
             card.onSelect.AddListener(SelectCard);
-            memoryCardDico.TryAdd(card, j);
+            card.onRequestSelect.AddListener(GraphicalSelectCard);
+            _memoryCardDico.TryAdd(card, j);
         }
 
         DisplayAllCards();
@@ -78,10 +82,23 @@ public class Memory : Minigame
 
     void DisplayAllCards()
     {
-        foreach (KeyValuePair<MemoryCard, int> valuePair in memoryCardDico)
+        foreach (KeyValuePair<MemoryCard, int> valuePair in _memoryCardDico)
         {
             valuePair.Key.gameObject.SetActive(true);
             valuePair.Key.RevealCard(revealLength);
+        }
+    }
+
+    void GraphicalSelectCard(MemoryCard card)
+    {
+        if (_selectedCards.Count == 0)
+        {
+            _selectedCards.Add(card);
+            card.SelectCard(selectedPositionCardFirst);
+        }else if (_selectedCards.Count == 1)
+        {
+            _selectedCards.Add(card);
+            card.SelectCard(selectedPositionCardSecond);
         }
     }
 
@@ -93,8 +110,8 @@ public class Memory : Minigame
             RemoveCards(selection.Item2);
             selection.Item1.DestroyCard();
             selection.Item2.DestroyCard();
-            currentPoint++;
-            if (currentPoint >= maxPoint)
+            _currentPoint++;
+            if (_currentPoint >= maxPoint)
             {
                 EndMiniGame();
             }
@@ -112,11 +129,20 @@ public class Memory : Minigame
 
     void SelectCard(MemoryCard card)
     {
-        _selectedCards.Add(card);
-        if (_selectedCards.Count >= 2)
+        //_selectedCards.Add(card);
+        _displayedCard++;
+        if (_displayedCard >= 2 && !_waitingForCall)
         {
-            CheckCards((_selectedCards[0], _selectedCards[1]));
+            _waitingForCall = true;
+            Invoke("CallCheckCardFromInvoke", 0.5f);
         }
+    }
+
+    void CallCheckCardFromInvoke()
+    {
+        _waitingForCall = false;
+        CheckCards((_selectedCards[0], _selectedCards[1]));
+        _displayedCard = 0;
     }
 
     void RemoveCards(MemoryCard[] cardsToRemove)
@@ -130,7 +156,6 @@ public class Memory : Minigame
 
     public void EditorDisplay()
     {
-
         _idsTableRepartitionTable = new int[memoryCards.Count * 2];
         int index = 0;
 

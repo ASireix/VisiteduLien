@@ -25,8 +25,8 @@ RectTransform:
   m_GameObject: {fileID: 2131760110050211125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.07, y: 1.07, z: 1.07}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1365533988858220480}
   - {fileID: 5741167087829762940}
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.97647065, g: 0.74509805, b: 0.121568635, a: 1}
+  m_Color: {r: 0.9764706, g: 0.74509805, b: 0.12156863, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -451,8 +451,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0000038146973, y: -231.762}
-  m_SizeDelta: {x: 306.38, y: 44.72409}
+  m_AnchoredPosition: {x: 0.0000038146973, y: -253.65958}
+  m_SizeDelta: {x: 306.38, y: 88.5194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1239288117968168052
 CanvasRenderer:
@@ -514,10 +514,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7.7
-  m_fontSizeBase: 8.66
+  m_fontSize: 11.5
+  m_fontSizeBase: 11.5
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 8.66
   m_fontStyle: 0
@@ -665,7 +665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 67.5487, y: 8.700195}
+  m_AnchoredPosition: {x: 67.5487, y: -36}
   m_SizeDelta: {x: 57.2974, y: -541.4004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8978544788784553450
@@ -941,7 +941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -56.200005, y: 8.700195}
+  m_AnchoredPosition: {x: -56.200005, y: -36}
   m_SizeDelta: {x: 112.4, y: -541.4004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4384806850610503647
@@ -1125,6 +1125,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9180178482565263931}
     m_Modifications:
+    - target: {fileID: 2319705538108362094, guid: 4714c57e0194516438ea26ec07e033a3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.12156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319705538108362094, guid: 4714c57e0194516438ea26ec07e033a3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319705538108362094, guid: 4714c57e0194516438ea26ec07e033a3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9764706
+      objectReference: {fileID: 0}
     - target: {fileID: 3594834666621586015, guid: 4714c57e0194516438ea26ec07e033a3,
         type: 3}
       propertyPath: m_Name
@@ -1213,7 +1228,7 @@ PrefabInstance:
     - target: {fileID: 3728581839550969249, guid: 4714c57e0194516438ea26ec07e033a3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 173.61124
+      value: 142.9
       objectReference: {fileID: 0}
     - target: {fileID: 3728581839550969249, guid: 4714c57e0194516438ea26ec07e033a3,
         type: 3}

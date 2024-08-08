@@ -11,13 +11,22 @@ public class MapButton : MonoBehaviour, IPointerClickHandler
     [SerializeField] bool lookAtCam;
     [SerializeField] int materialId;
     MeshRenderer _renderer;
+    Image image;
     [HideInInspector]
     public bool forceUnlock;
 
     void Start()
     {
-        _renderer = GetComponent<MeshRenderer>();
-        _renderer.materials[materialId].color = InfoManager.instance.lockColor;
+        if(TryGetComponent(out image))
+        {
+            Debug.Log("image color is null ? : " + InfoManager.instance.lockColor == null);
+            image.color = InfoManager.instance.lockColor;
+        }
+        if (TryGetComponent(out _renderer))
+        {
+            _renderer.materials[materialId].color = InfoManager.instance.lockColor;
+        }
+        
         InfoManager.instance.onInfoAdded.AddListener(UpdateGraphic);
         if (forceUnlock)
         {
@@ -48,7 +57,14 @@ public class MapButton : MonoBehaviour, IPointerClickHandler
         Debug.Log("Trying to update grahics");
         if (yes)
         {
-            _renderer.materials[materialId].color = InfoManager.instance.unlockColor;
+            if (image)
+            {
+                image.color = InfoManager.instance.unlockColor;
+            }
+            if (_renderer)
+            {
+                _renderer.materials[materialId].color = InfoManager.instance.unlockColor;
+            }
         }
     }
 
@@ -57,7 +73,14 @@ public class MapButton : MonoBehaviour, IPointerClickHandler
         Debug.Log("Trying to update grahics");
         if (id == eventD.Id)
         {
-            _renderer.materials[materialId].color = InfoManager.instance.unlockColor;
+            if (image)
+            {
+                image.color = InfoManager.instance.unlockColor;
+            }
+            if (_renderer)
+            {
+                _renderer.materials[materialId].color = InfoManager.instance.unlockColor;
+            }
         }
     }
 

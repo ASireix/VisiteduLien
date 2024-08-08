@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 public class MemoryCard : MonoBehaviour, IPointerClickHandler
 {
@@ -13,15 +14,18 @@ public class MemoryCard : MonoBehaviour, IPointerClickHandler
     bool _selected;
     [HideInInspector] public bool canSelect;
 
+    [System.NonSerialized] public UnityEvent<MemoryCard> onRequestSelect = new UnityEvent<MemoryCard>();
     [System.NonSerialized] public UnityEvent<MemoryCard> onSelect = new UnityEvent<MemoryCard>();
     [System.NonSerialized] public UnityEvent<MemoryCard> onDeselect = new UnityEvent<MemoryCard>();
 
     Quaternion startRot;
+    Vector3 startPos;
     public void OnPointerClick(PointerEventData eventData)
     {
         if (_inTransition) return;
         if (!_selected){
-            SelectCard();
+            //SelectCard();
+            onRequestSelect?.Invoke(this);
         }
     }
 
@@ -38,10 +42,11 @@ public class MemoryCard : MonoBehaviour, IPointerClickHandler
         setOnComplete(() => { _inTransition = false; }));
     }
 
-    void SelectCard()
+    public void SelectCard(Vector3 position)
     {
         _selected = true;
         _inTransition = true;
+        LeanTween.moveLocal(gameObject, position, 1f);
         LeanTween.rotateAroundLocal(gameObject, Vector3.forward, 180f, 1f).setOnComplete(() =>
         {
             _inTransition = false;
@@ -53,6 +58,7 @@ public class MemoryCard : MonoBehaviour, IPointerClickHandler
     {
         _selected = false;
         _inTransition = true;
+        LeanTween.moveLocal(gameObject, startPos, 1f);
         LeanTween.rotateAroundLocal(gameObject, Vector3.back, 180f, 1f).setOnComplete(() =>
         {
             _inTransition = false;
@@ -91,6 +97,7 @@ public class MemoryCard : MonoBehaviour, IPointerClickHandler
     public void Init(Texture2D front, Texture2D back, int id, Vector2 tiling, Vector2 offset)
     {
         startRot = transform.localRotation;
+        startPos = transform.localPosition;
 
         Renderer renderer = GetComponent<Renderer>();
         renderer.materials[0].SetTexture("_MainTex", front);
