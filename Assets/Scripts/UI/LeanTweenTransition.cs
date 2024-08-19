@@ -39,7 +39,7 @@ public class LeanTweenTransition : MonoBehaviour
     CanvasGroup canvasGroup;
 
     Vector3 startPos;
-    bool _isTweening;
+    //bool _isTweening;
 
     CanvasScaler canvasScaler;
     Vector3 screenProportion;
@@ -89,7 +89,7 @@ public class LeanTweenTransition : MonoBehaviour
     void TransitWithDirection(Vector3 endPoint)
     {
         //if (_isTweening) return;
-        _isTweening = true;
+        //_isTweening = true;
 
         LTSeq sequence = LeanTween.sequence();
 
@@ -129,7 +129,7 @@ public class LeanTweenTransition : MonoBehaviour
                 break;
         }
         startPos = endPoint;
-        sequence.append(LeanTween.alpha(gameObject,1,0f).setOnComplete(()=>{_isTweening = false;
+        sequence.append(LeanTween.alpha(gameObject,1,0f).setOnComplete(()=>{//_isTweening = false;
         }));
     }
 }

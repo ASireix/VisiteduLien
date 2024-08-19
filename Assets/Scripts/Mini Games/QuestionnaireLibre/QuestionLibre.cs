@@ -26,7 +26,7 @@ public class QuestionLibre : TextBoxContainer
 
     [Tooltip("Leave at 0 for infinite try")]
     [SerializeField] int maxNumberOfTry = 0;
-    [SerializeField] int numberOfTryToGetTips = 2;
+    //[SerializeField] int numberOfTryToGetTips = 2;
     [SerializeField] List<Indice> tips;
     [SerializeField] float tipsSlideDistance;
 

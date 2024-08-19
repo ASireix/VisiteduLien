@@ -12,7 +12,7 @@ public class CodeManager : MonoBehaviour
     {
         foreach (var item in saveSystem.eventDatas)
         {
-            codeEventDico.TryAdd(item.code, item);
+            codeEventDico.TryAdd(item.Id, item);
         }
         Digicode.onValidate.AddListener(CheckCodeFromManager);
         Evenement.onEventCompleted.AddListener(CheckCodeEvent);
@@ -20,7 +20,7 @@ public class CodeManager : MonoBehaviour
     }
 
     void CheckCodeEvent(EventData da){
-        CheckCodeFromManager(da.code);
+        CheckCodeFromManager(da.Id);
     }
 
 
@@ -42,7 +42,6 @@ public class CodeManager : MonoBehaviour
             Debug.Log("Incorrect code");
             digicode.AcquireCodeResult(false);
         }
-
     }
 
     void CheckCodeFromManager(string code)
@@ -69,7 +68,7 @@ public class CodeManager : MonoBehaviour
         {
             if (saveSystem.eventDatas[i].isCompleted)
             {
-                CheckCodeFromManager(saveSystem.eventDatas[i].code);
+                CheckCodeFromManager(saveSystem.eventDatas[i].Id);
             }
         }
     }

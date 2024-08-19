@@ -10,7 +10,8 @@ public class EventData : ScriptableObject
     public string Id;
     public bool isCompleted;
     public bool isIntroCompleted;
-    public string code;
+    //public string code;
+    [Tooltip("Objet 2d à afficher depuis la carte")]
     public GameObject objectToShow;
 
     public void OnCodeCracked(){

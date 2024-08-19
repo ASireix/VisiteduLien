@@ -19,7 +19,7 @@ public class CircularUI : MonoBehaviour
     [Header("Settings")]
     [SerializeField] float globalSpeed = 1f;
     [SerializeField] float rotatingSpeed = 1f;
-    [SerializeField] float scaleSpeed = 0.8f;
+    //[SerializeField] float scaleSpeed = 0.8f;
     [SerializeField] float circularButtonsFadingSpeed = 0.7f;
     [SerializeField] float circularButtonsDelay = 0.25f;
     // Start is called before the first frame update

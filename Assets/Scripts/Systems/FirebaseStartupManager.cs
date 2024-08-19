@@ -15,8 +15,8 @@ public class FirebaseStartupManager : MonoBehaviour
     public DatabaseReference databaseReference { get; private set; }
     FirebaseAuth auth;
 
-    bool _appInitialized = false;
-    bool _dbInitialized = false;
+    //bool _appInitialized = false;
+    //bool _dbInitialized = false;
 
     [Header("User")]
     public bool resetUser; //generate a new user at each launch
@@ -166,7 +166,7 @@ public class FirebaseStartupManager : MonoBehaviour
                 // Create and hold a reference to your FirebaseApp,
                 // where app is a Firebase.FirebaseApp property of your application class.
                 app = FirebaseApp.DefaultInstance;
-                _appInitialized = true;
+                //_appInitialized = true;
                 // Set a flag here to indicate whether Firebase is ready to use by your app.
             }
             else
