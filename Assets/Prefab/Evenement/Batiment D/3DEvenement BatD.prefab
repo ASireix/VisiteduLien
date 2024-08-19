@@ -4257,7 +4257,7 @@ GameObject:
   - component: {fileID: 7542105755449324739}
   - component: {fileID: 6881251660296387360}
   m_Layer: 0
-  m_Name: Intro Diaogue
+  m_Name: Intro Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4310,6 +4310,22 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     eventIdentifier: Question
+  - eventToTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3457045516190913037}
+          m_TargetAssemblyTypeName: Patrick, Assembly-CSharp
+          m_MethodName: LaunchAnimationSingle
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Point
+            m_BoolArgument: 0
+          m_CallState: 2
+    eventIdentifier: Point
   dialogueData: {fileID: 11400000, guid: f8156d4113e300edfb1ef1dcdf524c10, type: 2}
   onDialogueComplete:
     m_PersistentCalls:
@@ -8328,7 +8344,7 @@ GameObject:
   - component: {fileID: 6640156610331327117}
   - component: {fileID: 7228879731981693616}
   m_Layer: 0
-  m_Name: "Intro Diaogue Guid\xE9e"
+  m_Name: "Intro Dialogue Guid\xE9e"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8364,7 +8380,23 @@ MonoBehaviour:
   uiText: {fileID: 4853621021838838396}
   dialogueBox: {fileID: 6886856820672120697}
   typeSpeed: 4.37
-  customEvents: []
+  customEvents:
+  - eventToTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3457045516190913037}
+          m_TargetAssemblyTypeName: Patrick, Assembly-CSharp
+          m_MethodName: LaunchAnimationSingle
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Point
+            m_BoolArgument: 0
+          m_CallState: 2
+    eventIdentifier: Point
   dialogueData: {fileID: 11400000, guid: 6419c07654a7e876fad00f179d0a8420, type: 2}
   onDialogueComplete:
     m_PersistentCalls:
