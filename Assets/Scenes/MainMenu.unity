@@ -526,7 +526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -414.75, y: -167}
+  m_AnchoredPosition: {x: -414.75, y: -167.00002}
   m_SizeDelta: {x: 829.9, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40358000
@@ -46523,7 +46523,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1829740792}
-  - component: {fileID: 1829740791}
   - component: {fileID: 1829740790}
   m_Layer: 0
   m_Name: Update Manager
@@ -46545,18 +46544,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitAssetPack: {fileID: 11400000, guid: d44a6fb996567943fb5c6cc600de26b0, type: 2}
---- !u!114 &1829740791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829740789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a78d01536407c3e3d9ff3f0f8e56b474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1829740792
 Transform:
   m_ObjectHideFlags: 0
@@ -51547,6 +51534,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013278033289855568, guid: f9530229cb48ace45af1f705a89f489b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 57.700012
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167719701374390122, guid: f9530229cb48ace45af1f705a89f489b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -57.700012
       objectReference: {fileID: 0}
     - target: {fileID: 2610275996239156407, guid: f9530229cb48ace45af1f705a89f489b,
         type: 3}

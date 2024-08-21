@@ -84,7 +84,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 54631b1a2b47c1a4c95b67486599b5ef, type: 2}
   - {fileID: 11400000, guid: b13f64ef57dfe144ebedf328837c23ea, type: 2}
   - {fileID: 11400000, guid: 2f9744f71b5815349aa71fcbba3e1e2f, type: 2}
-  backface: {fileID: 2800000, guid: 24434cdab24d1ec47b3a3fffd0dc55b2, type: 3}
+  backface: {fileID: 2800000, guid: 45d0b87871545364ab0882e535b0956e, type: 3}
   cardPrefab: {fileID: 252530155619432574, guid: 5a223d796ce1fa135a4bb243e74e24a6,
     type: 3}
 --- !u!1001 &3548852882081023242
